@@ -38,18 +38,20 @@ function CardSection({ restaurant, hasLink, history }) {
           {<span>{anio}&nbsp;|&nbsp; $&nbsp;{precio}</span>}
         </p>
       </div>
-      <div className="right-infos">
-        <Rate value={Math.floor(note)} clickable={false} />
-        {hasLink && (
-          <div className="link-wrapper">
-            <a onClick={goToReviews} className="link" role="navigation">
-              <p>See all reviews</p>
-            </a>
-          </div>
-        )}
-      </div>
+
     </StyledCardSection>
   );
+
+//          <div className="right-infos">
+//        <Rate value={Math.floor(note)} clickable={false} />
+//        {hasLink && (
+//          <div className="link-wrapper">
+//            <a onClick={goToReviews} className="link" role="navigation">
+//              <p>See all reviews</p>
+//            </a>
+//          </div>
+//        )}
+//      </div>
 }
 
 CardSection.defaultProps = {

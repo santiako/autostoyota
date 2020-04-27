@@ -1,10 +1,17 @@
 import { createGlobalStyle } from 'styled-components';
 
+import injectGlobal from 'styled-components';
+
+//injectGlobal`
+//    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap');
+//`
+
 import sizes from '../../../assets/styles/sizes';
 import colors from '../../../assets/styles/colors';
 import fonts from '../../../assets/styles/fonts';
 
 const Restaurants = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap');
   #restaurants-page {
     padding: ${sizes.margin * 1.9}px ${sizes.margin * 2}px;
     .container {
