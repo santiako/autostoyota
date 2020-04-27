@@ -20,7 +20,7 @@ import Rate from '../Rate';
 import StyledCardSection from './StyledCardSection';
 
 function CardSection({ restaurant, hasLink, history }) {
-  const { category, district, id, name, note, price } = restaurant;
+  const { category, anio, precio, district, id, name, note, price, titulo, phone, website } = restaurant;
 
   /* istanbul ignore next */
   const goToReviews = () => {
@@ -29,17 +29,13 @@ function CardSection({ restaurant, hasLink, history }) {
     element.scrollIntoView({ behavior: 'smooth' });
   };
 
+/* {category && <span>&nbsp;•&nbsp;{category.name}</span>} */
   return (
     <StyledCardSection className={hasLink && 'banner'}>
       <div className="left-infos">
         {!hasLink ? <H4>{name}</H4> : <H1>{name}</H1>}
         <p className="description">
-          <Price value={price} />
-          {category && <span>&nbsp;•&nbsp;{category.name}</span>}
-          <span>
-            &nbsp;•&nbsp;
-            {district.includes('_') ? district.replace('_', '') : district}
-          </span>
+          {<span>{anio}&nbsp;|&nbsp; $&nbsp;{precio}</span>}
         </p>
       </div>
       <div className="right-infos">

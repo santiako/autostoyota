@@ -11,6 +11,8 @@ const GET_RESTAURANT = gql`
       }
       description
       price
+      anio
+      precio
       district
       cover {
         url

@@ -16,6 +16,8 @@ const GET_RESTAURANTS = gql`
       name
       note
       price
+      anio
+      precio
       reviews {
         note
         content

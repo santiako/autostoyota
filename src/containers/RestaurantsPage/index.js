@@ -33,11 +33,12 @@ function RestaurantsPage({ location: { search }, history }) {
 
   const getWhereParams = () => {
     const category = getQueryParameters(search, 'category') || 'all';
-    const precio = getQueryParameters(search, 'precio') || 'all';
+    //const precio = getQueryParameters(search, 'precio') || 'all';
     const district = getQueryParameters(search, 'district') || '_all';
 
     return {
       category,
+        //precio,
       district,
     };
   };
@@ -81,18 +82,18 @@ function RestaurantsPage({ location: { search }, history }) {
         options: [{ id: 'all', name: 'all' }, ...categories],
         value: getQueryParameters(search, 'category') || 'all',
       },
-        {
-        title: 'Filtrar por',
-        name: 'precio',
-        options: data.precios,
-        value: getQueryParameters(search, 'precio') || '_all',
-      },
-//      {
+//        {
 //        title: 'Filtrar por',
-//        name: 'district',
-//        options: data.districts,
-//        value: getQueryParameters(search, 'district') || '_all',
+//        name: 'precio',
+//        options: data.precios,
+//        value: getQueryParameters(search, 'precio') || '_all',
 //      },
+      {
+        title: 'Filtrar por',
+        name: 'district',
+        options: data.districts,
+        value: getQueryParameters(search, 'district') || '_all',
+      }
     ];
 
     return <Filters filters={filters} onChange={handleChange} range={range} />;
