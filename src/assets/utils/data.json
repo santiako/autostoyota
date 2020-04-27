@@ -1,0 +1,13 @@
+{
+  "districts": [
+    "_all",
+    "_1st",
+    "_De mayor a menor precio",
+    "_Más nuevos primero",
+    "_Más viejos primero"
+  ],
+  "precios": [
+    "_all",
+    "815900"
+  ]
+}
