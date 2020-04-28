@@ -18,6 +18,15 @@ const GET_RESTAURANTS = gql`
       price
       anio
       precio
+      modeloext
+      titulo
+      titulo20px
+      autoabajo {
+        url
+      }
+      autoabajo2 {
+        url
+      }
       reviews {
         note
         content

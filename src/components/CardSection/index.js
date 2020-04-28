@@ -29,7 +29,6 @@ function CardSection({ restaurant, hasLink, history }) {
     element.scrollIntoView({ behavior: 'smooth' });
   };
 
-/* {category && <span>&nbsp;•&nbsp;{category.name}</span>} */
   return (
     <StyledCardSection className={hasLink && 'banner'}>
       <div className="left-infos">

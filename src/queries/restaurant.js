@@ -13,6 +13,15 @@ const GET_RESTAURANT = gql`
       price
       anio
       precio
+      modeloext
+      titulo
+      titulo20px
+      autoabajo {
+        url
+      }
+      autoabajo2 {
+        url
+      }
       district
       cover {
         url

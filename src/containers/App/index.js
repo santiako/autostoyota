@@ -19,20 +19,11 @@ import NotFound from '../NotFound';
 
 const headerUrls = [
   { name: 'Modelos', to: '/' },
-  { name: 'Ficha de modelo', to: '/about' }
+  { name: 'Ficha de modelo', to: '/5/informations' }
   // Uncomment when available
   // { name: 'Blog', to: '/blog' }
 ];
-const footerUrls = [
-  { name: 'My account', to: '/' },
-  { name: 'Favorites', to: '/' },
-  { name: 'Terms', to: '/' },
-  { name: 'Restaurants', to: '/' },
-  { name: 'Privacy', to: '/' },
-  { name: 'About us', to: '/about' },
-  { name: 'Contact', to: '/' },
-  { name: 'Blog', to: '/' }
-];
+
 
 function App() {
   return (
@@ -46,7 +37,7 @@ function App() {
         <Route path="/:id/:content" component={RestaurantPage} exact />
         <Route component={NotFound} />
       </Switch>
-      <Footer links={footerUrls}/>
+      <Footer />
     </div>
   );
 }

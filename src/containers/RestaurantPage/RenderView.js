@@ -5,6 +5,7 @@ import Grid from '../../components/Grid';
 import CardSection from '../../components/CardSection';
 import Slider from '../../components/Slider';
 import Tabs from '../../components/Tabs';
+import H1 from '../../components/H1';
 
 const RenderView = ({
   restaurant,
@@ -18,7 +19,7 @@ const RenderView = ({
     params: { content, id },
   },
 }) => {
-  const { cover } = restaurant;
+  const { cover, modeloext, titulo, description } = restaurant;
   const tabs = ['informations', 'reviews'];
 
   const toggle = tab => {
@@ -29,6 +30,33 @@ const RenderView = ({
 
   return (
     <div>
+      <div className="intro-wrapper2">
+        <div className="img-wrapper">
+        </div>
+
+        <div className="parr-wrapper">
+            <div className="parr-wrapper">
+                <h3>{ modeloext }</h3>
+                <H1>{ titulo }</H1>
+                <p>{ description }</p>
+            </div>
+        </div>
+      </div>
+
+      <div className="slider-wrapper2">
+
+      </div>
+
+      <div className="info-wrapper">
+          <div className="infocol-texleft">
+
+          </div>
+          <div className="infocol-texright">
+
+          </div>
+      </div>
+
+
       <div className="intro-wrapper">
         <Grid>
           <li className="column">
@@ -40,9 +68,11 @@ const RenderView = ({
           </li>
         </Grid>
       </div>
+
       <div className="slider-wrapper">
         <Slider slides={cover} />
       </div>
+
       <div className="informations-wrapper">
         <Tabs
           restaurant={{ ...restaurant, count }}
