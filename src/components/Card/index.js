@@ -22,13 +22,13 @@ function Card({ restaurant, onClick }) {
 
   return (
     <StyledCard onClick={() => onClick(id)} className="clickable-card">
+      <CardSection restaurant={restaurant} />
       <div className="img-wrapper">
         <Img
           src={`${process.env.REACT_APP_BACKEND_URL}${coverURL}`}
           alt="cover"
         />
       </div>
-      <CardSection restaurant={restaurant} />
     </StyledCard>
   );
 }

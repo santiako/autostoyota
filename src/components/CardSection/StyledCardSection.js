@@ -27,22 +27,9 @@ const StyledCardSection = styled.div`
   .link p {
     margin-top: ${sizes.margin * 0.3}px;
   }
-  .left-infos,
-  .right-infos {
+  .left-infos {
     display: block;
-  }
-  .right-infos {
-    margin-top: -${sizes.margin * 2}px;
-    div,
-    p {
-      width: 100%;
-      text-align: right;
-    }
-    .rating,
-    label {
-      height: 22px;
-      line-height: 23px;
-    }
+    text-align: center;
   }
   .description {
     text-transform: capitalize;
