@@ -15,7 +15,7 @@ const StyledHeader = styled.div`
     position: relative;
     height: ${sizes.header.height.small};
     padding: 0 ${sizes.header.padding};
-    background-color: ${colors.lightBeige};
+    background-color: white;
   }
 
   // Animated hamburger icon
@@ -64,13 +64,14 @@ const StyledHeader = styled.div`
     z-index: 99;
     width: 100%;
     padding: 0 ${sizes.header.padding};
-    background-color: ${colors.lightBeige};
+    background-color: white;
     li {
       a {
         border-bottom: 1px solid ${colors.lightGrey};
         &.active,
         &:hover {
           span {
+            color: ${colors.redtext};
             ${fonts.bold};
           }
         }
@@ -82,6 +83,7 @@ const StyledHeader = styled.div`
       }
     }
   }
+
   .navbar-collapse.show + button {
     .nav-icon span:nth-child(1) {
       top: 18px;
@@ -117,6 +119,9 @@ const StyledHeader = styled.div`
     }
     .navbar-brand {
       margin-right: ${sizes.margin * 4}px;
+      img {
+        width: 50px;
+      }
     }
     .navbar-collapse {
       position: relative;
@@ -135,7 +140,8 @@ const StyledHeader = styled.div`
           span {
             margin: auto;
             line-height: 17px;
-            ${fonts.reg};
+            color: ${colors.blacknav};
+            ${fonts.bold};
             ::after {
               display: block;
               content: attr(title);
@@ -152,12 +158,13 @@ const StyledHeader = styled.div`
             left: 0;
             display: block;
             width: 100%;
-            border: 1px solid transparent;
+            border: 2px solid transparent;
           }
           &.active,
           &:hover {
             &:after {
-              border-color: ${colors.lightOrange};
+
+              border-color: ${colors.red};
             }
           }
         }

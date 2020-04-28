@@ -15,7 +15,6 @@ const StyledLink = styled(Link)`
   display: block;
   padding: ${sizes.margin * 2}px 0;
   color: ${colors.mediumGrey};
-  text-transform: uppercase;
   font-size: 12px;
   letter-spacing 1.2px;
   p {
