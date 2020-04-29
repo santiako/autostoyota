@@ -6,6 +6,8 @@ import CardSection from '../../components/CardSection';
 import Slider from '../../components/Slider';
 import Tabs from '../../components/Tabs';
 import H1 from '../../components/H1';
+import H3 from '../../components/H3';
+import Img from '../../components/Img';
 
 const RenderView = ({
   restaurant,
@@ -28,15 +30,28 @@ const RenderView = ({
     }
   };
 
+//      <div className="informations-wrapper">
+//        <Tabs
+//          restaurant={{ ...restaurant, count }}
+//          toggleTab={toggle}
+//          selected={content}
+//          tabs={tabs}
+//        />
+//      </div>
+//    </div>
+
   return (
     <div>
       <div className="intro-wrapper2">
         <div className="img-wrapper">
+            <Img
+                src={`${process.env.REACT_APP_BACKEND_URL}${cover[0].url}`}
+              />
         </div>
 
         <div className="parr-wrapper">
             <div className="parr-wrapper">
-                <h3>{ modeloext }</h3>
+                <H3>{ modeloext }</H3>
                 <H1>{ titulo }</H1>
                 <p>{ description }</p>
             </div>
@@ -71,15 +86,6 @@ const RenderView = ({
 
       <div className="slider-wrapper">
         <Slider slides={cover} />
-      </div>
-
-      <div className="informations-wrapper">
-        <Tabs
-          restaurant={{ ...restaurant, count }}
-          toggleTab={toggle}
-          selected={content}
-          tabs={tabs}
-        />
       </div>
     </div>
   );
