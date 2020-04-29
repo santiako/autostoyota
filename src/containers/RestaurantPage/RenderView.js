@@ -5,6 +5,7 @@ import Grid from '../../components/Grid';
 import CardSection from '../../components/CardSection';
 import Slider from '../../components/Slider';
 import Tabs from '../../components/Tabs';
+import P from '../../components/P';
 import H1 from '../../components/H1';
 import H3 from '../../components/H3';
 import Img from '../../components/Img';
@@ -53,7 +54,7 @@ const RenderView = ({
             <div className="parr-wrapper">
                 <H3>{ modeloext }</H3>
                 <H1>{ titulo }</H1>
-                <p>{ description }</p>
+                <P>{ description }</P>
             </div>
         </div>
       </div>

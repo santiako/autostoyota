@@ -11,7 +11,7 @@ import fonts from '../../assets/styles/fonts';
 const H4 = styled.h4`
   ${fonts.bold}
   font-size: 28px;
-  color: ${colors.black};
+  color: ${props => props.inputColor || colors.black};
 `;
 
 export default H4;

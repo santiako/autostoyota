@@ -1,6 +1,6 @@
 /**
  *
- * H1
+ * P
  *
  */
 
@@ -10,14 +10,14 @@ import fonts from '../../assets/styles/fonts';
 import colors from '../../assets/styles/colors';
 import sizes from '../../assets/styles/sizes';
 
-const H1 = styled.h1`
-  ${props => props.morebold ? fonts.bold700 : fonts.bold};
-  font-size: 32px;
+const P = styled.p`
+  ${fonts.reg}
+  font-size: ${props => props.card ? '14px!important' : '16px!important'};
   color: ${props => props.inputColor || colors.black};
-  line-height: 1.14;
+  line-height: 1.69;
   @media (min-width: ${sizes.tablet}) {
-    font-size: 50px;
+    font-size: ${props => props.card ? '14px!important' : '16px!important'};
   }
 `;
 
-export default H1;
+export default P;

@@ -12,8 +12,10 @@ import {
   restaurantShape,
 } from '../../shapes/restaurant';
 
+import colors from '../../assets/styles/colors';
 import H1 from '../H1';
 import H4 from '../H4';
+import P from '../P';
 import Price from '../Price';
 import Rate from '../Rate';
 
@@ -32,9 +34,9 @@ function CardSection({ restaurant, hasLink, history }) {
   return (
     <StyledCardSection className={hasLink && 'banner'}>
       <div className="left-infos">
-        {!hasLink ? <H4>{name}</H4> : <H1>{name}</H1>}
+        {!hasLink ? <H4 inputColor="black">{name}</H4> : <H1 inputColor="black">{name}</H1>}
         <p className="description">
-          {<span>{anio}&nbsp;|&nbsp; $&nbsp;{precio}</span>}
+          {<P card inputColor={colors.blacknav}>{anio}&nbsp;|&nbsp; $&nbsp;{precio}</P>}
         </p>
       </div>
 

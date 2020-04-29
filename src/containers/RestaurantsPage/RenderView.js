@@ -31,7 +31,7 @@ const RenderView = ({
 
   return (
     <div className="restaurants-wrapper">
-      <H1>Descubrí todos los modelos</H1>
+      <H1 morebold>Descubrí todos los modelos</H1>
       <Grid>
         {restaurants.map(restaurant => (
           <li className="column" key={restaurant.id}>
