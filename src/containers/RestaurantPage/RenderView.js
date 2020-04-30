@@ -22,7 +22,7 @@ const RenderView = ({
     params: { content, id },
   },
 }) => {
-  const { cover, modeloext, titulo, description } = restaurant;
+  const { cover, modeloext, titulo, description, titulo20px, autoabajo, autoabajo2 } = restaurant;
   const tabs = ['informations', 'reviews'];
 
   const toggle = tab => {
@@ -51,11 +51,9 @@ const RenderView = ({
         </div>
 
         <div className="parr-wrapper">
-            <div className="parr-wrapper">
-                <H3>{ modeloext }</H3>
-                <H1>{ titulo }</H1>
-                <P>{ description }</P>
-            </div>
+            <H3>{ modeloext }</H3>
+            <H1>{ titulo }</H1>
+            <P>{ description }</P>
         </div>
       </div>
 
@@ -63,14 +61,7 @@ const RenderView = ({
 
       </div>
 
-      <div className="info-wrapper">
-          <div className="infocol-texleft">
 
-          </div>
-          <div className="infocol-texright">
-
-          </div>
-      </div>
 
 
       <div className="intro-wrapper">
@@ -87,6 +78,23 @@ const RenderView = ({
 
       <div className="slider-wrapper">
         <Slider slides={cover} />
+      </div>
+
+      <div className="info-wrapper">
+          <div className="infocol-texleft">
+              <H3>{ titulo20px }</H3>
+              <P>{ description }</P>
+              <Img
+                src={`${process.env.REACT_APP_BACKEND_URL}${autoabajo.url}`}
+               />
+          </div>
+          <div className="infocol-texright">
+              <H3>{ titulo20px }</H3>
+              <P>{ description }</P>
+              <Img
+                src={`${process.env.REACT_APP_BACKEND_URL}${autoabajo2.url}`}
+               />
+          </div>
       </div>
     </div>
   );
