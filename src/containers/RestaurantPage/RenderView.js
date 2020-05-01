@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Container, Row, Col } from 'reactstrap';
 
 import Grid from '../../components/Grid';
 import CardSection from '../../components/CardSection';
@@ -40,27 +41,36 @@ const RenderView = ({
 //        />
 //      </div>
 //    </div>
+   // <div className="intro-wrapper2"></div>
 
   return (
     <div>
-      <div className="intro-wrapper2">
-        <div className="img-wrapper">
-            <Img
-                src={`${process.env.REACT_APP_BACKEND_URL}${cover[0].url}`}
-              />
-        </div>
+    <Container fluid={true}>
+        <Row>
 
-        <div className="parr-wrapper">
-            <H3>{ modeloext }</H3>
-            <H1>{ titulo }</H1>
-            <P>{ description }</P>
-        </div>
-      </div>
+            <Col md={{ size: 6, offset: 1 }}>
+                <div className="img-wrapper">
+                    <Img
+                        src={`${process.env.REACT_APP_BACKEND_URL}${cover[0].url}`}
+                      />
+                </div>
+            </Col>
 
-      <div className="slider-wrapper2">
+            <Col md={{ size: 6, offset: 1 }}>
+                <div className="parr-wrapper">
+                    <H3>{ modeloext }</H3>
+                    <H1>{ titulo }</H1>
+                    <P>{ description }</P>
+                </div>
+            </Col>
 
-      </div>
+        </Row>
 
+        <Row>
+          <div className="slider-wrapper2">
+
+          </div>
+        </Row>
 
 
 
@@ -81,21 +91,31 @@ const RenderView = ({
       </div>
 
       <div className="info-wrapper">
+        <Row>
           <div className="infocol-texleft">
+            <li className="column">
               <H3>{ titulo20px }</H3>
               <P>{ description }</P>
               <Img
                 src={`${process.env.REACT_APP_BACKEND_URL}${autoabajo.url}`}
                />
+            </li>
           </div>
+        </Row>
+
+        <Row>
           <div className="infocol-texright">
+            <li className="column">
               <H3>{ titulo20px }</H3>
               <P>{ description }</P>
               <Img
                 src={`${process.env.REACT_APP_BACKEND_URL}${autoabajo2.url}`}
                />
+            </li>
           </div>
+        </Row>
       </div>
+    </Container>
     </div>
   );
 };
