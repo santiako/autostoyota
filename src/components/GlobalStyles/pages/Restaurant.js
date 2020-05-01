@@ -4,6 +4,7 @@ import sizes from '../../../assets/styles/sizes';
 import colors from '../../../assets/styles/colors';
 
 const Restaurant = createGlobalStyle`
+
   #restaurant-page {
     .intro-wrapper {
       z-index: 1;
@@ -20,6 +21,29 @@ const Restaurant = createGlobalStyle`
         }
       }
     }
+
+    .imgleft {
+        margin: 0 0 0 auto;
+        max-width: 750px;
+        min-width: 490px;
+    }
+
+    .parrleft {
+        margin: 3em auto 0 0;
+        max-width: 480px;
+        min-width: 300px;
+    }
+    .parr-wrapper {
+
+        H1 {
+            margin-top: .2em;
+        }
+        P {
+            margin-top: 2em;
+            max-width: 400px;
+        }
+    }
+
     .slider-wrapper {
       position: absolute;
       top: 0;
@@ -27,6 +51,7 @@ const Restaurant = createGlobalStyle`
       z-index: 0;
       width: 100%;
     }
+
     .intro-wrapper, .slider-wrapper {
       // Bootstrap custom
       @media (min-width: ${sizes.tablet}) {
@@ -43,6 +68,7 @@ const Restaurant = createGlobalStyle`
         max-width: 1240px;
       }
     }
+
     .informations-wrapper {
       padding: ${sizes.margin * 2.1}px ${sizes.margin * 2}px;
       overflow: hidden;
@@ -51,6 +77,8 @@ const Restaurant = createGlobalStyle`
         padding: 0 0 ${sizes.margin * 1.4}px 0;
       }
     }
+
+
     @media (min-width: ${sizes.tablet}) {
       .intro-wrapper {
         padding: ${sizes.margin * 5.8}px 0 0 0;

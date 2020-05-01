@@ -42,13 +42,15 @@ const RenderView = ({
 //      </div>
 //    </div>
    // <div className="intro-wrapper2"></div>
+//      <div className="slider-wrapper">
+//        <Slider slides={cover} />
+//      </div>
 
   return (
     <div>
     <Container fluid={true}>
-        <Row>
-
-            <Col md={{ size: 6, offset: 1 }}>
+        <Row style={{ margin: '2em auto 4em auto' }}>
+            <Col md="6" className='imgleft'>
                 <div className="img-wrapper">
                     <Img
                         src={`${process.env.REACT_APP_BACKEND_URL}${cover[0].url}`}
@@ -56,14 +58,13 @@ const RenderView = ({
                 </div>
             </Col>
 
-            <Col md={{ size: 6, offset: 1 }}>
+            <Col md="6" className='parrleft'>
                 <div className="parr-wrapper">
                     <H3>{ modeloext }</H3>
                     <H1>{ titulo }</H1>
                     <P>{ description }</P>
                 </div>
             </Col>
-
         </Row>
 
         <Row>
@@ -86,9 +87,7 @@ const RenderView = ({
         </Grid>
       </div>
 
-      <div className="slider-wrapper">
-        <Slider slides={cover} />
-      </div>
+
 
       <div className="info-wrapper">
         <Row>
