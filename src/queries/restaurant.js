@@ -51,6 +51,13 @@ const GET_RESTAURANT = gql`
           }
         }
       }
+      item_sliders {
+        thumb {
+          url
+        }
+        titulo
+        descripcion
+      }
       website
     }
     reviewsConnection(where: $reviewsFilter) {

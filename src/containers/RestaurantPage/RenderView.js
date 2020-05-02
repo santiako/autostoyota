@@ -10,6 +10,7 @@ import P from '../../components/P';
 import H1 from '../../components/H1';
 import H3 from '../../components/H3';
 import Img from '../../components/Img';
+import Carrousel from '../../components/Carrousel';
 
 const RenderView = ({
   restaurant,
@@ -69,7 +70,7 @@ const RenderView = ({
 
         <Row>
           <div className="slider-wrapper2">
-
+                <Carrousel restaurant={...restaurant} />
           </div>
         </Row>
 

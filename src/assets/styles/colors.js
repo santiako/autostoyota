@@ -4,6 +4,7 @@ const colors = {
   darkBlue: '#202675',
   mediumGrey: '#bfbfbf',
   lightGrey: '#e7e7e7',
+  greySlider: '#f7f7f7',
   darkGrey: '#969696',
   black: '#373737',
   blacknav: '#191919',

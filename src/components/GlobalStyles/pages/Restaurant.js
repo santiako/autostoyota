@@ -69,6 +69,12 @@ const Restaurant = createGlobalStyle`
       }
     }
 
+    .slider-wrapper2 {
+        width: 100%;
+        height: 410px;
+        background-color: ${colors.greySlider};
+    }
+
     .informations-wrapper {
       padding: ${sizes.margin * 2.1}px ${sizes.margin * 2}px;
       overflow: hidden;
