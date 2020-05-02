@@ -5,13 +5,14 @@
  */
 
 import React from 'react';
-import moment from 'moment';
 import PropTypes from 'prop-types';
 
 import StyledItemCarrousel from './StyledItemCarrousel';
 
 /* eslint-disable camelcase */
 import Img from '../Img';
+import H3 from '../H3';
+import P from '../P';
 
 function ItemCarrousel({
   thumb: {
@@ -20,28 +21,38 @@ function ItemCarrousel({
   titulo,
   descripcion
 }) {
+
+//      <div className="review-wrapper">
+//        <div className="img-wrapper">
+//          <Img
+//            src={`${process.env.REACT_APP_BACKEND_URL}${url}`}
+//            alt={username}
+//          />
+//        </div>
+//        <div className="infos-wrapper">
+//          <p className="username">{username}</p>
+//          <p className="published">
+//            Published {moment().diff(moment(created_at), 'days')} days ago
+//          </p>
+//          <div className="rate-wrapper">
+//            <Rate min={0} max={5} value={note} />
+//          </div>
+//        </div>
+//        <div className="comment">
+//          <p>{content}</p>
+//        </div>
+//      </div>
+
   return (
     <StyledItemCarrousel>
-      <div className="review-wrapper">
         <div className="img-wrapper">
-          <Img
-            src={`${process.env.REACT_APP_BACKEND_URL}${url}`}
-            alt={username}
-          />
+            <Img
+                src={`${process.env.REACT_APP_BACKEND_URL}${url}`}
+            />
         </div>
-        <div className="infos-wrapper">
-          <p className="username">{username}</p>
-          <p className="published">
-            Published {moment().diff(moment(created_at), 'days')} days ago
-          </p>
-          <div className="rate-wrapper">
-            <Rate min={0} max={5} value={note} />
-          </div>
-        </div>
-        <div className="comment">
-          <p>{content}</p>
-        </div>
-      </div>
+        <H3>{ titulo }</H3>
+        <P>{ descripcion }</P>
+
     </StyledItemCarrousel>
   );
 }

@@ -70,7 +70,7 @@ const RenderView = ({
 
         <Row>
           <div className="slider-wrapper2">
-                <Carrousel restaurant={...restaurant} />
+                <Carrousel restaurant={{ ...restaurant }} />
           </div>
         </Row>
 

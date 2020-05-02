@@ -15,15 +15,11 @@ import {
 import StyledCarrousel from './StyledCarrousel';
 import ItemCarrousel from '../ItemCarrousel';
 //import CardSection from '../CardSection';
-import Img from '../Img';
+//import Img from '../Img';
 
 function Carrousel({ restaurant }) {
   const { item_sliders } = restaurant;
 
-//    <Img
-//      src={`${process.env.REACT_APP_BACKEND_URL}${coverURL}`}
-//      alt="cover"
-//    />
     return (
     <StyledCarrousel>
         <div className="carr-wrapper">
@@ -44,8 +40,3 @@ Carrousel.propTypes = {
 };
 
 export default Carrousel;
-
-
-
-
-
