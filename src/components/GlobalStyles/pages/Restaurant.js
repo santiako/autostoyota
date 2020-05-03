@@ -32,15 +32,16 @@ const Restaurant = createGlobalStyle`
         margin: 3em auto 0 0;
         max-width: 480px;
         min-width: 300px;
-    }
-    .parr-wrapper {
 
-        H1 {
-            margin-top: .2em;
-        }
-        P {
-            margin-top: 2em;
-            max-width: 400px;
+        .parr-wrapper {
+
+            H1 {
+                margin-top: .2em;
+            }
+            P {
+                margin-top: 2em;
+                max-width: 400px;
+            }
         }
     }
 
@@ -74,6 +75,33 @@ const Restaurant = createGlobalStyle`
         height: 410px;
         background-color: ${colors.greySlider};
     }
+
+    .info-wrapper {
+        margin: 60px 0 117px 0;
+        .infocol-texleft {
+            .parr-wrapper {
+                padding: 0 100px;
+                margin: 80px 0 auto 0;
+                max-width: 750px;
+            }
+            .img-wrapper {
+                max-width: 560px;
+                margin: 0 auto;
+            }
+        }
+        .infocol-texright {
+            .img-wrapper {
+                max-width: 560px;
+                margin: 0 auto;
+            }
+            .parr-wrapper {
+                padding: 0 100px;
+                margin: 80px 0 auto 0;
+                max-width: 750px;
+            }
+        }
+    }
+
 
     .informations-wrapper {
       padding: ${sizes.margin * 2.1}px ${sizes.margin * 2}px;

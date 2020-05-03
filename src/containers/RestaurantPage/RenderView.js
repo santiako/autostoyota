@@ -76,31 +76,43 @@ const RenderView = ({
 
 
 
-      <div className="info-wrapper">
-        <Row>
-          <div className="infocol-texleft">
-            <li className="column">
-              <H3>{ titulo20px }</H3>
-              <P>{ description }</P>
-              <Img
-                src={`${process.env.REACT_APP_BACKEND_URL}${autoabajo.url}`}
-               />
-            </li>
-          </div>
-        </Row>
+        <div className="info-wrapper">
+            <div className="infocol-texleft">
+                <Row>
+                    <Col>
+                        <div className="parr-wrapper">
+                            <H3>{ titulo20px }</H3>
+                            <P>{ description }</P>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="img-wrapper">
+                            <Img
+                            src={`${process.env.REACT_APP_BACKEND_URL}${autoabajo.url}`}
+                            />
+                        </div>
+                    </Col>
+                </Row>
+            </div>
 
-        <Row>
-          <div className="infocol-texright">
-            <li className="column">
-              <H3>{ titulo20px }</H3>
-              <P>{ description }</P>
-              <Img
-                src={`${process.env.REACT_APP_BACKEND_URL}${autoabajo2.url}`}
-               />
-            </li>
-          </div>
-        </Row>
-      </div>
+            <div className="infocol-texright">
+                <Row>
+                    <Col>
+                        <div className="img-wrapper">
+                        <Img
+                            src={`${process.env.REACT_APP_BACKEND_URL}${autoabajo2.url}`}
+                           />
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="parr-wrapper">
+                          <H3>{ titulo20px }</H3>
+                          <P>{ description }</P>
+                        </div>
+                    </Col>
+                </Row>
+            </div>
+        </div>
     </Container>
     </div>
   );
