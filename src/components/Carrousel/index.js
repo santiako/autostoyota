@@ -6,6 +6,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Row } from 'reactstrap';
 
 import {
   itemsliderDefaultShape,
@@ -16,6 +17,7 @@ import StyledCarrousel from './StyledCarrousel';
 import ItemCarrousel from '../ItemCarrousel';
 //import CardSection from '../CardSection';
 //import Img from '../Img';
+//key={item.id}
 
 function Carrousel({ restaurant }) {
   const { item_sliders } = restaurant;
@@ -23,9 +25,11 @@ function Carrousel({ restaurant }) {
     return (
     <StyledCarrousel>
         <div className="carr-wrapper">
+        <Row>
             {item_sliders.map(item => (
-                <ItemCarrousel {...item} key={item.id} />
+                <ItemCarrousel {...item} />
             ))}
+        </Row>
         </div>
     </StyledCarrousel>
     );
