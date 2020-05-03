@@ -76,20 +76,6 @@ const RenderView = ({
 
 
 
-      <div className="intro-wrapper">
-        <Grid>
-          <li className="column">
-            <CardSection
-              restaurant={{ ...restaurant }}
-              hasLink
-              history={history}
-            />
-          </li>
-        </Grid>
-      </div>
-
-
-
       <div className="info-wrapper">
         <Row>
           <div className="infocol-texleft">

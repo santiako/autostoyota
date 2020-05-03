@@ -15,23 +15,28 @@ import {
 
 import StyledCarrousel from './StyledCarrousel';
 import ItemCarrousel from '../ItemCarrousel';
-//import CardSection from '../CardSection';
-//import Img from '../Img';
-//key={item.id}
+import Img from '../Img';
+import dots from '../../assets/img/dots.svg';
 
 function Carrousel({ restaurant }) {
   const { item_sliders } = restaurant;
 
     return (
-    <StyledCarrousel>
+    <>
+    <StyledCarrousel />
         <div className="carr-wrapper">
-        <Row>
-            {item_sliders.map(item => (
-                <ItemCarrousel {...item} />
-            ))}
-        </Row>
+            <Row>
+                {item_sliders.map(item => (
+                    <ItemCarrousel {...item} key={item.id} />
+                ))}
+            </Row>
+            <Row>
+                <div className="dots-wrapper">
+                    <Img src={dots} />
+                </div>
+            </Row>
         </div>
-    </StyledCarrousel>
+    </>
     );
 }
 
@@ -44,3 +49,12 @@ Carrousel.propTypes = {
 };
 
 export default Carrousel;
+
+
+
+
+
+
+
+
+

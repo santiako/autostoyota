@@ -72,7 +72,6 @@ const Restaurant = createGlobalStyle`
     .slider-wrapper2 {
         width: 100%;
         height: 410px;
-        padding: 43px 0 49px 0;
         background-color: ${colors.greySlider};
     }
 
