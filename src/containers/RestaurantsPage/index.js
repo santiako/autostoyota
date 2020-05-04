@@ -20,26 +20,32 @@ import Filters from '../../components/Filters';
 
 function RestaurantsPage({ location: { search }, history }) {
   const start = parseInt(getQueryParameters(search, 'start'), 10) || 0;
-  const orderby = getQueryParameters(search, 'orderby') || 'name';
+
+  var orderby = getQueryParameters(search, 'orderby') || 'name';
+  var sortext = `${orderby}:ASC`;
   const range = 15;
 
   const setSearch = (where, nextStart) => {
     history.push({
+//      search: `?category=${where.category}&precio=${
+//        where.precio}&anio=${
+//        where.anio}&start=${nextStart}`
       search: `?category=${where.category}&district=${
-        where.district
-      }&start=${nextStart}`,
+        where.district}&start=${nextStart}`
     });
   };
 
   const getWhereParams = () => {
     const category = getQueryParameters(search, 'category') || 'all';
-    //const precio = getQueryParameters(search, 'precio') || 'all';
-    const district = getQueryParameters(search, 'district') || '_all';
+    //const precio = getQueryParameters(search, 'orderby') || 'precio';
+    const precio = getQueryParameters(search, 'precio') || 'all';
+    //const anio = getQueryParameters(search, 'orderby') || 'anio';
+    const anio = getQueryParameters(search, 'anio') || 'all';
 
     return {
       category,
-        //precio,
-      district,
+      precio,
+      anio
     };
   };
 
@@ -56,9 +62,31 @@ function RestaurantsPage({ location: { search }, history }) {
 
   const handleClick = id => history.push(`/${id}/informations`);
 
+// Setea modificaciones al hacer click en un filtro
   const handleChange = ({ target }) => {
+    var trg = target;
     const where = getWhereParams();
-    set(where, target.name, target.value);
+
+    // Si target.value = asc, ordena por precio ASC
+    switch (target.value) {
+        case 'asc':
+            sortext = `${orderby}:ASC`;
+        break;
+        case 'dsc':
+            sortext = `${orderby}:DESC`;
+        break;
+        case 'new':
+            sortext = `${orderby}:DESC`;
+            trg.name = 'anio';
+        break;
+        case 'old':
+            sortext = `${orderby}:ASC`;
+            trg.name = 'anio';
+        break;
+    }
+
+    alert('Name: ' + trg.name + ' Value: ' + trg.value);
+    set(where, trg.name, trg.value);
     setSearch(where, 0);
   };
 
@@ -79,21 +107,27 @@ function RestaurantsPage({ location: { search }, history }) {
       {
         title: 'Ordenar por',
         name: 'category',
-        options: [{ id: 'all', name: 'all' }, ...categories],
+        options: [{ id: 'all', name: 'todos' }, ...categories],
         value: getQueryParameters(search, 'category') || 'all',
       },
-//        {
-//        title: 'Filtrar por',
-//        name: 'precio',
-//        options: data.precios,
-//        value: getQueryParameters(search, 'precio') || '_all',
-//      },
       {
         title: 'Filtrar por',
-        name: 'district',
-        options: data.districts,
-        value: getQueryParameters(search, 'district') || '_all',
+        name: 'precio',
+        options: [
+            { id: 'all', name: 'nada' },
+            { id: 'asc', name: 'de menor a mayor precio' },
+            { id: 'dsc', name: 'de mayor a menor precio' },
+            { id: 'new', name: 'más nuevos primero' },
+            { id: 'old', name: 'más viejos primero' } ],
+        //value: orderby
+        value: getQueryParameters(search, 'precio') || 'all'
       }
+//      {
+//        title: 'Filtrar por',
+//        name: 'district',
+//        options: data.districts,
+//        value: getQueryParameters(search, 'district') || '_all',
+//      }
     ];
 
     return <Filters filters={filters} onChange={handleChange} range={range} />;
@@ -115,6 +149,7 @@ function RestaurantsPage({ location: { search }, history }) {
     );
   };
 
+
   return (
     <div className="page-wrapper" id="restaurants-page">
       <Container>
@@ -124,7 +159,7 @@ function RestaurantsPage({ location: { search }, history }) {
           variables={{
             limit: range,
             start,
-            sort: `${orderby}:ASC`,
+            sort: sortext,
             where: prepareWhereParams(),
           }}
         />
