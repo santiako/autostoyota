@@ -22,16 +22,14 @@ function RestaurantsPage({ location: { search }, history }) {
   const start = parseInt(getQueryParameters(search, 'start'), 10) || 0;
 
   var orderby = getQueryParameters(search, 'orderby') || 'name';
-  var sortext = `${orderby}:ASC`;
+  var sortext = `${orderby}:asc`;
   const range = 15;
 
   const setSearch = (where, nextStart) => {
     history.push({
-//      search: `?category=${where.category}&precio=${
-//        where.precio}&anio=${
-//        where.anio}&start=${nextStart}`
-      search: `?category=${where.category}&district=${
-        where.district}&start=${nextStart}`
+      search: `?category=${where.category}&orderby=${sortext}&start=${nextStart}`
+//      search: `?category=${where.category}&sort=anio:ASC&precio=${where.precio}&anio=${where.anio}&start=${nextStart}`
+      //search: `?category=${where.category}&start=${nextStart}`
     });
   };
 
@@ -68,24 +66,45 @@ function RestaurantsPage({ location: { search }, history }) {
     const where = getWhereParams();
 
     // Si target.value = asc, ordena por precio ASC
-    switch (target.value) {
-        case 'asc':
-            sortext = `${orderby}:ASC`;
+    switch (trg.value) {
+//        case 'all':
+//            orderby = 'name';
+//            sortext = `${orderby}:asc`;
+//            trg.name = 'name:asc';
+//        break;
+
+        case 'name:asc':
+            orderby = 'name';
+            sortext = `${orderby}:asc`;
+            trg.name = 'name:asc';
         break;
-        case 'dsc':
-            sortext = `${orderby}:DESC`;
+        case 'precio:asc':
+            orderby = 'precio';
+            sortext = `${orderby}:asc`;
+            trg.name = 'precio:asc';
         break;
-        case 'new':
-            sortext = `${orderby}:DESC`;
-            trg.name = 'anio';
+        case 'precio:desc':
+            orderby = 'precio';
+            sortext = `${orderby}:desc`;
+            trg.name = 'precio:desc';
         break;
-        case 'old':
-            sortext = `${orderby}:ASC`;
-            trg.name = 'anio';
+        case 'anio:desc':
+            orderby = 'anio';
+            sortext = `${orderby}:desc`;
+            trg.name = 'anio:desc';
         break;
+        case 'anio:asc':
+            orderby = 'anio';
+            sortext = `${orderby}:asc`;
+            trg.name = 'anio:asc';
+        break;
+//        default:
+//            orderby = getQueryParameters(search, 'orderby') || 'name';
+//            sortext = `${orderby}:asc`;
+//            trg.name = 'name:asc';
     }
 
-    alert('Name: ' + trg.name + ' Value: ' + trg.value);
+    //alert('Name: ' + trg.name + ' Value: ' + trg.value + ' Orderby: ' + orderby);
     set(where, trg.name, trg.value);
     setSearch(where, 0);
   };
@@ -109,25 +128,20 @@ function RestaurantsPage({ location: { search }, history }) {
         name: 'category',
         options: [{ id: 'all', name: 'todos' }, ...categories],
         value: getQueryParameters(search, 'category') || 'all',
+        //value: orderby
       },
       {
         title: 'Filtrar por',
-        name: 'precio',
+        name: 'orderby',
         options: [
-            { id: 'all', name: 'nada' },
-            { id: 'asc', name: 'de menor a mayor precio' },
-            { id: 'dsc', name: 'de mayor a menor precio' },
-            { id: 'new', name: 'más nuevos primero' },
-            { id: 'old', name: 'más viejos primero' } ],
-        //value: orderby
-        value: getQueryParameters(search, 'precio') || 'all'
+            { id: 'name:asc', name: 'nada' },
+            { id: 'precio:asc', name: 'de menor a mayor precio' },
+            { id: 'precio:desc', name: 'de mayor a menor precio' },
+            { id: 'anio:desc', name: 'más nuevos primero' },
+            { id: 'anio:asc', name: 'más viejos primero' } ],
+        value: orderby,
+        //value: getQueryParameters(search, 'precio') || 'all'
       }
-//      {
-//        title: 'Filtrar por',
-//        name: 'district',
-//        options: data.districts,
-//        value: getQueryParameters(search, 'district') || '_all',
-//      }
     ];
 
     return <Filters filters={filters} onChange={handleChange} range={range} />;
@@ -159,7 +173,7 @@ function RestaurantsPage({ location: { search }, history }) {
           variables={{
             limit: range,
             start,
-            sort: sortext,
+            sort: `${orderby}:asc`,
             where: prepareWhereParams(),
           }}
         />
