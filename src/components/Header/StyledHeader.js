@@ -174,6 +174,7 @@ const StyledHeader = styled.div`
         width: 50px;
       }
     }
+
     .navbar-collapse {
       position: relative;
       top: inherit;
@@ -181,10 +182,13 @@ const StyledHeader = styled.div`
       width: inherit;
       padding: 0;
       border-left: 1px solid ${colors.greyBorder};
+
       li {
         display: table-cell;
-        padding: 0 ${sizes.margin * 6}px;
+        padding: 0 30px;
         a {
+          margin: 7px auto;
+          padding: 0;
           position: relative;
           display: flex;
           height: 100%;
@@ -195,6 +199,10 @@ const StyledHeader = styled.div`
             line-height: 17px;
             color: ${colors.blacknav};
             ${fonts.bold};
+            font-size: 14px;
+            text-align: center;
+            width: 125px;
+
             ::after {
               display: block;
               content: attr(title);
@@ -236,7 +244,7 @@ const StyledHeader = styled.div`
 
       .navbar-collapse {
         li {
-            padding: 0 ${sizes.margin * 10}px;
+            padding: 0 30px;
           a {
 
             &.active,
