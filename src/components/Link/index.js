@@ -8,9 +8,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import StyledLink from './StyledLink';
 
-function Link({ active, children, url }) {
+function Link({ active, children, url, clase }) {
+
+    var test = active && 'active' + ' ' + (clase !=null) ? clase : null;
+    //alert(test);
   return (
-    <StyledLink className={active && 'active'} to={url}>
+    <StyledLink className={test} to={url}>
       {children}
     </StyledLink>
   );
@@ -19,13 +22,15 @@ function Link({ active, children, url }) {
 Link.defaultProps = {
   active: null,
   children: null,
-  url: '#'
+  url: '#',
+  clase: null
 };
 
 Link.propTypes = {
   active: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  url: PropTypes.string
+  url: PropTypes.string,
+  clase: PropTypes.string
 };
 
 export default Link;

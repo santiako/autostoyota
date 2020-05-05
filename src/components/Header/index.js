@@ -37,6 +37,7 @@ function Header({ links }) {
                 return (
                   <NavItem key={link.to} onClick={toggleCollapse}>
                     <Link
+                      clase={link.clase}
                       url={link.to}
                       active={window.location.pathname === link.to}
                     >

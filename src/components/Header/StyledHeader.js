@@ -57,6 +57,7 @@ const StyledHeader = styled.div`
     }
   }
 
+  // Mobile
   .navbar-collapse {
     position: fixed;
     top: ${sizes.header.height.small};
@@ -67,12 +68,25 @@ const StyledHeader = styled.div`
     background-color: white;
     li {
       a {
-        border-bottom: 1px solid ${colors.lightGrey};
+        padding: 7px 0;
+        &.borbot {
+            padding: 7px 0 31px 0;
+            border-bottom: 1px solid ${colors.lightGrey}!important;
+        }
+
+        ${fonts.reg};
+        font-size: 20px;
+        font-weight: normal;
+        line-height: normal;
+        letter-spacing: -0.1px;
+        text-align: right;
+        color: black;
+
         &.active,
         &:hover {
           span {
             color: ${colors.redtext};
-            ${fonts.bold};
+            //${fonts.bold};
           }
         }
       }
@@ -103,6 +117,7 @@ const StyledHeader = styled.div`
     }
   }
 
+  // Tablet
   @media (min-width: ${sizes.tablet}) {
     .navbar {
       height: ${sizes.header.height.large};
@@ -137,6 +152,8 @@ const StyledHeader = styled.div`
           position: relative;
           display: flex;
           height: 100%;
+          color: ${colors.blacknav};
+
           span {
             margin: auto;
             line-height: 17px;
@@ -160,10 +177,10 @@ const StyledHeader = styled.div`
             width: 100%;
             border: 2px solid transparent;
           }
+
           &.active,
           &:hover {
             &:after {
-
               border-color: ${colors.red};
             }
           }
@@ -174,13 +191,31 @@ const StyledHeader = styled.div`
         }
       }
     }
+
+    // Escritorio
     @media (min-width: ${sizes.desktop}) {
       .navbar-brand {
         margin-right: ${sizes.margin * 11.5}px;
       }
+
       .navbar-collapse {
         li {
-          padding: 0 ${sizes.margin * 10}px;
+            padding: 0 ${sizes.margin * 10}px;
+          a {
+
+            &.active,
+            &:hover {
+              span {
+                color: ${colors.redtext};
+                ${fonts.bold};
+              }
+            }
+          }
+          &:last-of-type {
+            a {
+
+            }
+          }
         }
       }
     }
