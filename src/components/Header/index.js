@@ -55,6 +55,7 @@ function Header({ links }) {
               <span />
               <span />
             </div>
+            <p className="nav-cerrar">Cerrar</p>
           </NavbarToggler>
         </div>
       </Navbar>

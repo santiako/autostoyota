@@ -26,23 +26,21 @@ const headerUrls = [
   { name: 'Financiación', to: '/' },
   { name: 'Reviews y Comunidad', to: '/', clase: 'borbot' },
 
-  { name: 'Toyota Mobility Service', to: '/' },
+  { name: 'Toyota Mobility Service', to: '/', clase: 'bortop' },
   { name: 'Toyota Gazoo Racing', to: '/' },
   { name: 'Toyota Híbridos', to: '/', clase: 'borbot' },
 
-  { name: 'Concesionarios', to: '/' },
+  { name: 'Concesionarios', to: '/', clase: 'bortop' },
   { name: 'Test Drive', to: '/' },
-  { name: 'Contacto', to: '/', clase: 'borbot' },
+  { name: 'Contacto', to: '/', clase: 'bot' },
 
-  { name: 'Actividades', to: '/' },
-  { name: 'Servicios al Cliente', to: '/' },
-  { name: 'Ventas Especiales', to: '/' },
-  { name: 'Innovación', to: '/' },
-  { name: 'Prensa', to: '/' },
-  { name: 'Acerca de...', to: '/' }
+  { name: 'Actividades', to: '/', clase: 'bortop back' },
+  { name: 'Servicios al Cliente', to: '/', clase: 'back' },
+  { name: 'Ventas Especiales', to: '/', clase: 'back' },
+  { name: 'Innovación', to: '/', clase: 'back' },
+  { name: 'Prensa', to: '/', clase: 'back' },
+  { name: 'Acerca de...', to: '/', clase: 'ulti back' }
 
-  // Uncomment when available
-  // { name: 'Blog', to: '/blog' }
 ];
 
 
