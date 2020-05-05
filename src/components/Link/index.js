@@ -10,7 +10,7 @@ import StyledLink from './StyledLink';
 
 function Link({ active, children, url, clase }) {
 
-    var test = active && 'active' + ' ' + (clase !=null) ? clase : null;
+    var test = (active && 'active') + ' ' + (clase !=null) ? clase : null;
     //alert(test);
   return (
     <StyledLink className={test} to={url}>
