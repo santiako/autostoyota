@@ -22,24 +22,24 @@ import NotFound from '../NotFound';
 const headerUrls = [
   { name: 'Modelos', to: '/' },
   { name: 'Ficha de modelo', to: '/5/informations' },
-  { name: 'Servicios y accesorios', to: '/' },
-  { name: 'Financiación', to: '/' },
-  { name: 'Reviews y Comunidad', to: '/', clase: 'borbot' },
+  { name: 'Servicios y accesorios', to: '' },
+  { name: 'Financiación', to: '' },
+  { name: 'Reviews y Comunidad', to: '', clase: 'borbot' },
 
-  { name: 'Toyota Mobility Service', to: '/', clase: 'bortop' },
-  { name: 'Toyota Gazoo Racing', to: '/' },
-  { name: 'Toyota Híbridos', to: '/', clase: 'borbot' },
+  { name: 'Toyota Mobility Service', to: '', clase: 'bortop' },
+  { name: 'Toyota Gazoo Racing', to: '' },
+  { name: 'Toyota Híbridos', to: '', clase: 'borbot' },
 
-  { name: 'Concesionarios', to: '/', clase: 'bortop' },
-  { name: 'Test Drive', to: '/' },
-  { name: 'Contacto', to: '/', clase: 'bot' },
+  { name: 'Concesionarios', to: '', clase: 'bortop' },
+  { name: 'Test Drive', to: '' },
+  { name: 'Contacto', to: '', clase: 'bot' },
 
-  { name: 'Actividades', to: '/', clase: 'bortop back' },
-  { name: 'Servicios al Cliente', to: '/', clase: 'back' },
-  { name: 'Ventas Especiales', to: '/', clase: 'back' },
-  { name: 'Innovación', to: '/', clase: 'back' },
-  { name: 'Prensa', to: '/', clase: 'back' },
-  { name: 'Acerca de...', to: '/', clase: 'ulti back' }
+  { name: 'Actividades', to: '', clase: 'bortop back' },
+  { name: 'Servicios al Cliente', to: '', clase: 'back' },
+  { name: 'Ventas Especiales', to: '', clase: 'back' },
+  { name: 'Innovación', to: '', clase: 'back' },
+  { name: 'Prensa', to: '', clase: 'back' },
+  { name: 'Acerca de...', to: '', clase: 'ulti back' }
 
 ];
 

@@ -10,10 +10,12 @@ import StyledLink from './StyledLink';
 
 function Link({ active, children, url, clase }) {
 
-    var test = (active && 'active') + ' ' + (clase !=null) ? clase : null;
-    //alert(test);
+//    const test = (active && 'active') + ' ' + (clase !=null) ? clase : null;
+
+    const test2 = (clase != null) ? clase + ' ' : '' + (active && 'active');
+
   return (
-    <StyledLink className={test} to={url}>
+    <StyledLink className={test2} to={url}>
       {children}
     </StyledLink>
   );
