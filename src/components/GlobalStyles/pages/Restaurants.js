@@ -23,7 +23,8 @@ const Restaurants = createGlobalStyle`
     }
     .filters-wrapper {
       li {
-        margin-bottom: ${sizes.margin * 1.2}px;
+        float: left;
+        margin: ${sizes.margin * 0.8}px ${sizes.margin * 1}px;
       }
     }
     .ooops-wrapper {
@@ -84,8 +85,9 @@ const Restaurants = createGlobalStyle`
       .filters-collapse.collapse:not(.show), .filters-collapse.collapse {
         position: relative;
         display: inline-block;
-        width: calc(${sizes.header.logoWidth.large} + ${sizes.margin * 11.6}px);
-        padding-top: ${sizes.margin * 7.3}px;
+        width: 100%;
+        padding-top: 0;
+
         .filters-wrapper {
           padding-right: ${sizes.margin * 3}px;
           border-right: 1px solid ${colors.greyBorder};

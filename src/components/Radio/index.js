@@ -7,9 +7,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import StyledRadio from './StyledRadio';
+import StyledRadioGlobal from './StyledRadioGlobal';
 
 /* eslint-disable jsx-a11y/label-has-for */
 function Radio({ checked, id, message, name, onChange, value, ...rest }) {
+
   const handleChange = () => {
     const target = {
       name,
@@ -23,6 +25,7 @@ function Radio({ checked, id, message, name, onChange, value, ...rest }) {
 
   return (
     <>
+      <StyledRadioGlobal />
       <StyledRadio
         checked={checked}
         id={value}

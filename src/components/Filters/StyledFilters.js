@@ -88,10 +88,18 @@ const StyledFilters = createGlobalStyle`
     position: relative;
     margin-bottom: 0;
     padding-left: ${sizes.margin * 2}px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: normal;
     color: ${colors.black};
-    text-transform: capitalize;
+    //text-transform: capitalize;
+
+    font-family: ${fonts.reg};
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.08px;
+    text-align: center;
   }
   .radio-custom {
     position: absolute;
@@ -101,19 +109,38 @@ const StyledFilters = createGlobalStyle`
     content: '';
     position: absolute;
     left: 0;
-    bottom: ${sizes.margin * 0.3}px;
-    width: 12px;
-    height: 12px;
+    bottom: -8px;
+    width: calc(100% + 17px);
+    height: 31px;
     padding: ${sizes.margin * 0.2}px;
     text-align: center;
-    border-radius: 50%;
-    background: #fff;
-    border: 1px solid ${colors.darkBlue};
+    border-radius: 18px;
+    //background: #fff;
+    //border: 1px solid ${colors.darkBlue};
   }
-  .radio-custom:checked + .radio-custom-label:before {
-    background: ${colors.darkBlue};
-    box-shadow: inset 0px 0px 0px 2px #fff;
+  .radio-custom:checked + .radio-custom-label:before,
+  .radio-custom:hover + .radio-custom-label:before {
+    z-index: -1;
+    background: #f7f7f7;
+    //box-shadow: inset 0px 0px 0px 2px #fff;
   }
 `;
 
 export default StyledFilters;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
