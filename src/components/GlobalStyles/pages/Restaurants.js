@@ -12,6 +12,7 @@ const Restaurants = createGlobalStyle`
     padding: ${sizes.margin * 1.9}px ${sizes.margin * 2}px;
     .container {
       position: relative;
+
     }
     .restaurants-wrapper {
       ul:not(.pagination) {

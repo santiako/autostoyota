@@ -12,20 +12,28 @@ import fonts from '../../assets/styles/fonts';
 
 const StyledFooter = styled.div`
 
-  //background-color: black;
-
   .rectangle-blk {
     height: 50px;
     background-color: black;
   }
 
-  @media (min-width: ${sizes.tablet}) {
-    padding: 0 20px;
+  .container {
+    margin: 0;
+    padding: 0;
+  }
 
+  @media (min-width: ${sizes.tablet}) {
+    //padding: 0 20px;
+    padding: 0;
+    .container {
+        max-width: 100%;
+    }
   }
 
   @media (min-width: ${sizes.desktop}) {
-
+      .container {
+        max-width: 100%;
+      }
   }
 `;
 
