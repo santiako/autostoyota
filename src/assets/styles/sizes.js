@@ -7,13 +7,13 @@ const sizes = {
   header: {
     height: {
       small: '60px',
-      large: '84px'
+      large: '70px'
     },
     logoWidth: {
       small: '96px',
       large: '170px'
     },
-    padding: '20px'
+    padding: '0'
   },
   article: {
     img: {

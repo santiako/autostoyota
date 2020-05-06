@@ -31,6 +31,29 @@ function Header({ links }) {
               <img src={logo} alt="logo" />
             </Link>
           </div>
+
+        <Nav navbar>
+          <NavItem key={links[0].to}>
+            <Link
+              clase={links[0].clase}
+              url={links[0].to}
+              active={window.location.pathname === links[0].to}
+            >
+              <span title={links[0].name}>{links[0].name}</span>
+            </Link>
+          </NavItem>
+          <NavItem key={links[1].to}>
+            <Link
+              clase={links[1].clase}
+              url={links[1].to}
+              active={window.location.pathname === links[1].to}
+            >
+              <span title={links[1].name}>{links[1].name}</span>
+            </Link>
+          </NavItem>
+        </Nav>
+
+
           <Collapse isOpen={isOpen} navbar>
             <Nav navbar>
               {links.map(link => {

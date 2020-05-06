@@ -105,7 +105,6 @@ const StyledHeader = styled.div`
         &:hover {
           span {
             color: ${colors.redtext};
-            //${fonts.bold};
           }
         }
       }
@@ -157,10 +156,11 @@ const StyledHeader = styled.div`
   @media (min-width: ${sizes.tablet}) {
     .navbar {
       height: ${sizes.header.height.large};
+
       .container,
-      .collapse,
-      ul {
+      .collapse, ul {
         height: 100%;
+        margin: 0;
       }
     }
     .navbar-brand,
@@ -169,19 +169,23 @@ const StyledHeader = styled.div`
       vertical-align: top;
     }
     .navbar-brand {
-      margin-right: ${sizes.margin * 4}px;
+      margin-left: ${sizes.margin * 3.5}px;
       img {
-        width: 50px;
+        width: 40px;
       }
     }
 
-    .navbar-collapse {
+    .navbar-expand-md .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-collapse, .navbar-nav {
       position: relative;
       top: inherit;
       left: inherit;
       width: inherit;
       padding: 0;
-      border-left: 1px solid ${colors.greyBorder};
+      //border-left: 1px solid ${colors.greyBorder};
 
       li {
         display: table-cell;
@@ -201,6 +205,7 @@ const StyledHeader = styled.div`
             ${fonts.bold};
             font-size: 14px;
             text-align: center;
+            letter-spacing: normal;
             width: 125px;
 
             ::after {
@@ -224,6 +229,9 @@ const StyledHeader = styled.div`
 
           &.active,
           &:hover {
+            span {
+                color: ${colors.redtext};
+            }
             &:after {
               border-color: ${colors.red};
             }
@@ -239,10 +247,13 @@ const StyledHeader = styled.div`
     // Escritorio
     @media (min-width: ${sizes.desktop}) {
       .navbar-brand {
-        margin-right: ${sizes.margin * 11.5}px;
+        margin-right: ${sizes.margin * 6.5}px;
       }
 
       .navbar-collapse {
+        .navbar-nav {
+            display: none;
+        }
         li {
             padding: 0 30px;
           a {
