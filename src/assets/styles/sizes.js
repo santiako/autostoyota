@@ -17,7 +17,7 @@ const sizes = {
   },
   article: {
     img: {
-      height: '176px'
+      height: '132px'
     }
   },
   slider: {

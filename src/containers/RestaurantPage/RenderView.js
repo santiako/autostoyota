@@ -33,20 +33,6 @@ const RenderView = ({
     }
   };
 
-//      <div className="informations-wrapper">
-//        <Tabs
-//          restaurant={{ ...restaurant, count }}
-//          toggleTab={toggle}
-//          selected={content}
-//          tabs={tabs}
-//        />
-//      </div>
-//    </div>
-   // <div className="intro-wrapper2"></div>
-//      <div className="slider-wrapper">
-//        <Slider slides={cover} />
-//      </div>
-
   return (
     <div>
     <Container fluid={true}>
@@ -73,8 +59,6 @@ const RenderView = ({
                 <Carrousel restaurant={{ ...restaurant }} />
           </div>
         </Row>
-
-
 
         <div className="info-wrapper">
             <div className="infocol-texleft">

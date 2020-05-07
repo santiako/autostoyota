@@ -22,7 +22,7 @@ const Grid = styled.ul`
       }
     }
     @media (min-width: ${sizes.desktop}) {
-      width: calc(100% / 3);
+      width: calc(100% / 4);
       &:nth-child(even) {
         padding-left: inherit;
       }

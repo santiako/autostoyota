@@ -11,6 +11,7 @@ import { set } from 'lodash';
 
 import { GET_RESTAURANTS } from '../../queries';
 import Query from '../../components/Query';
+import H1 from '../../components/H1';
 
 import data from '../../assets/utils/data';
 import getQueryParameters from '../../utils/getQueryParameters';
@@ -167,6 +168,7 @@ function RestaurantsPage({ location: { search }, history }) {
   return (
     <div className="page-wrapper" id="restaurants-page">
       <Container>
+        <H1 morebold>Descubrí todos los modelos</H1>
         <Query
           query={GET_RESTAURANTS}
           render={renderView}

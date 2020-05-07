@@ -34,7 +34,6 @@ const Restaurant = createGlobalStyle`
         min-width: 300px;
 
         .parr-wrapper {
-
             H1 {
                 margin-top: .2em;
             }
@@ -130,6 +129,7 @@ const Restaurant = createGlobalStyle`
           padding: ${sizes.margin * 2}px 0 ${sizes.margin *
   2.8}px calc(40% + ${sizes.margin * 3}px);
         }
+
         li.column {
           @media (min-width: ${sizes.desktop}) {
             :nth-child(3n + 1) {
@@ -144,6 +144,10 @@ const Restaurant = createGlobalStyle`
               padding-left: calc(${sizes.margin * 3.2}px/3*2);
               padding-right: 0;
             }
+            :nth-child(4n + 4) {
+              padding-left: calc(${sizes.margin * 3.2}px/3*2);
+              padding-right: 0;
+            }
           }
         }
       }
@@ -152,3 +156,15 @@ const Restaurant = createGlobalStyle`
 `;
 
 export default Restaurant;
+
+
+
+
+
+
+
+
+
+
+
+

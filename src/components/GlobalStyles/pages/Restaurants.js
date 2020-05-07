@@ -10,9 +10,12 @@ const Restaurants = createGlobalStyle`
 
   #restaurants-page {
     padding: ${sizes.margin * 1.9}px ${sizes.margin * 2}px;
+
     .container {
       position: relative;
-
+    }
+    H1 {
+        margin: ${sizes.margin * 5}px 0 ${sizes.margin * 4}px 0;
     }
     .restaurants-wrapper {
       ul:not(.pagination) {
@@ -71,9 +74,8 @@ const Restaurants = createGlobalStyle`
       .restaurants-wrapper {
         display: inline-block;
         vertical-align: top;
-        width: calc(100% - calc(${
-          sizes.header.logoWidth.large
-        } + ${sizes.margin * 11.6}px));
+        width: 100%;
+
         h1 {
           padding-left: ${sizes.margin * 3}px;
         }

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Paging from '../../components/Paging';
 import Grid from '../../components/Grid';
 import Card from '../../components/Card';
-import H1 from '../../components/H1';
 import Img from '../../components/Img';
 
 import img from '../../assets/img/ooops.png';
@@ -31,7 +30,6 @@ const RenderView = ({
 
   return (
     <div className="restaurants-wrapper">
-      <H1 morebold>Descubrí todos los modelos</H1>
       <Grid>
         {restaurants.map(restaurant => (
           <li className="column" key={restaurant.id}>
