@@ -48,6 +48,21 @@ function FiltersGroup({
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen(prevState => !prevState);
 
+//    const handleChangeDrop = () => {
+//        const target = {
+//          name,
+//          value,
+//          type: 'radio',
+//          active: !active,
+//        };
+//
+//        onChange({ target });
+//    };
+
+//    <DropdownItem htmlFor={value} key={option.name || option}
+//        active={value === option.id || value === option} onClick={onChange}>{option.name || option}
+//    </DropdownItem>
+
   return (
     <div>
       <p>{title}</p>
@@ -73,13 +88,18 @@ function FiltersGroup({
             {options.map(option => {
                 return (
                 <>
-                <DropdownItem key={option.name || option}
-                    active={value === option.id || value === option} onClick={onChange}>{option.name || option}
-                    </DropdownItem>
+                <Radio
+                    onChange={onChange}
+                    name={name}
+                    message={option.name || option}
+                    value={option.id || option}
+                    checked={value === option.id || value === option}
+                  />
+
                 <DropdownItem divider />
                 </>
                 );
-                })}
+            })}
         </DropdownMenu>
     </Dropdown>
     }
@@ -87,6 +107,7 @@ function FiltersGroup({
     </div>
   );
 }
+
 
 FiltersGroup.defaultProps = {
   title: '',

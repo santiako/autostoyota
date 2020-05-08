@@ -129,19 +129,17 @@ function RestaurantsPage({ location: { search }, history }) {
         name: 'category',
         options: [{ id: 'all', name: 'todos' }, ...categories],
         value: getQueryParameters(search, 'category') || 'all',
-        //value: orderby
       },
       {
         title: 'Ordenar por',
         name: 'orderby',
         options: [
-            { id: 'name:asc', name: 'nada' },
-            { id: 'precio:asc', name: 'de menor a mayor precio' },
-            { id: 'precio:desc', name: 'de mayor a menor precio' },
-            { id: 'anio:desc', name: 'más nuevos primero' },
-            { id: 'anio:asc', name: 'más viejos primero' } ],
-        value: orderby,
-        //value: getQueryParameters(search, 'precio') || 'all'
+            { id: 'name:asc', name: 'Nada' },
+            { id: 'precio:asc', name: 'De <bold>menor</bold> a <bold>mayor</bold> precio' },
+            { id: 'precio:desc', name: 'De <bold>mayor</bold> a <bold>menor</bold> precio' },
+            { id: 'anio:desc', name: 'Más <bold>nuevos</bold> primero' },
+            { id: 'anio:asc', name: 'Más <bold>viejos</bold> primero' } ],
+        value: orderby
       }
     ];
 
