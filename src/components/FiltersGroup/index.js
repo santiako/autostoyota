@@ -4,21 +4,54 @@
  *
  */
 
-import React from 'react';
+import React, { useState } from 'react';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import PropTypes from 'prop-types';
-
 import Radio from '../Radio';
+
+
+//const Example = (props) => {
+//  const [dropdownOpen, setDropdownOpen] = useState(false);
+//
+//  const toggle = () => setDropdownOpen(prevState => !prevState);
+//
+//  return (
+//    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+//      <DropdownToggle caret>
+//        Dropdown
+//        </DropdownToggle>
+//      <DropdownMenu>
+//        <DropdownItem header>Header</DropdownItem>
+//        <DropdownItem>Some Action</DropdownItem>
+//        <DropdownItem disabled>Action (disabled)</DropdownItem>
+//        <DropdownItem divider />
+//        <DropdownItem>Foo Action</DropdownItem>
+//        <DropdownItem>Bar Action</DropdownItem>
+//        <DropdownItem>Quo Action</DropdownItem>
+//      </DropdownMenu>
+//    </Dropdown>
+//  );
+//}
+//
+//export default Example;
+
 
 function FiltersGroup({
   title,
   name,
   options,
   value,
-  onChange
+  onChange,
+  tipo
 }) {
+
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const toggle = () => setDropdownOpen(prevState => !prevState);
+
   return (
     <div>
       <p>{title}</p>
+      {(tipo == 'radio') ?
       <ul>
         {options.map(option => {
           return (
@@ -33,7 +66,22 @@ function FiltersGroup({
             </li>
           );
         })}
-      </ul>
+      </ul>:
+    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+      <DropdownToggle caret>{ title }</DropdownToggle>
+        <DropdownMenu>
+            {options.map(option => {
+                return (
+                <>
+                <DropdownItem key={option.name || option}
+                    active={value === option.id || value === option}>{option.name || option}</DropdownItem>
+                <DropdownItem divider />
+                </>
+                );
+                })}
+        </DropdownMenu>
+    </Dropdown>
+    }
       <hr />
     </div>
   );
@@ -45,6 +93,7 @@ FiltersGroup.defaultProps = {
   onChange: () => {},
   options: [],
   value: null,
+  tipo: 'drop'
 };
 
 FiltersGroup.propTypes = {
@@ -53,6 +102,7 @@ FiltersGroup.propTypes = {
   onChange: PropTypes.func,
   options: PropTypes.array,
   value: PropTypes.string,
+  tipo: PropTypes.string
 };
 
 export default FiltersGroup;

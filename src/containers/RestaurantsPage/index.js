@@ -125,14 +125,14 @@ function RestaurantsPage({ location: { search }, history }) {
 //         value: orderby,
 //       },
       {
-        title: 'Ordenar por',
+        title: 'Filtrar por',
         name: 'category',
         options: [{ id: 'all', name: 'todos' }, ...categories],
         value: getQueryParameters(search, 'category') || 'all',
         //value: orderby
       },
       {
-        title: 'Filtrar por',
+        title: 'Ordenar por',
         name: 'orderby',
         options: [
             { id: 'name:asc', name: 'nada' },

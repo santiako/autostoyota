@@ -127,20 +127,3 @@ const StyledFilters = createGlobalStyle`
 `;
 
 export default StyledFilters;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
