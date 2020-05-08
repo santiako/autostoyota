@@ -124,6 +124,39 @@ const StyledFilters = createGlobalStyle`
     background: #f7f7f7;
     //box-shadow: inset 0px 0px 0px 2px #fff;
   }
+
+  // Dropdown
+  .dropdown-toggle {
+    border: none;
+    background: none;
+    color: ${colors.black};
+
+    &:hover, &:focus {
+        background: none;
+        color: ${colors.black};
+        box-shadow: none;
+    }
+  }
+  .dropdown-menu {
+    box-shadow: 2px 8px 20px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 7px;
+  }
 `;
 
 export default StyledFilters;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

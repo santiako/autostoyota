@@ -74,7 +74,8 @@ function FiltersGroup({
                 return (
                 <>
                 <DropdownItem key={option.name || option}
-                    active={value === option.id || value === option}>{option.name || option}</DropdownItem>
+                    active={value === option.id || value === option} onClick={onChange}>{option.name || option}
+                    </DropdownItem>
                 <DropdownItem divider />
                 </>
                 );
