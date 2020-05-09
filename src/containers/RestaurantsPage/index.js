@@ -129,6 +129,7 @@ function RestaurantsPage({ location: { search }, history }) {
         name: 'category',
         options: [{ id: 'all', name: 'todos' }, ...categories],
         value: getQueryParameters(search, 'category') || 'all',
+        tipo: 'radio'
       },
       {
         title: 'Ordenar por',
@@ -139,7 +140,8 @@ function RestaurantsPage({ location: { search }, history }) {
             { id: 'precio:desc', name: 'De <strong>mayor</strong> a <strong>menor</strong> precio' },
             { id: 'anio:desc', name: 'Más <strong>nuevos</strong> primero' },
             { id: 'anio:asc', name: 'Más <strong>viejos</strong> primero' } ],
-        value: orderby
+        value: orderby,
+        tipo: 'drop'
       }
     ];
 

@@ -21,7 +21,7 @@ function Filters({ filters, onChange }) {
     <>
       <StyledFilters />
       <Collapse className="filters-collapse" isOpen={isOpen} navbar>
-        <H1>Filters</H1>
+        <H1>Filtros</H1>
         <hr />
         <div className="filters-wrapper">
           {filters.map(filter => {
@@ -42,11 +42,12 @@ function Filters({ filters, onChange }) {
             );
           })}
         </div>
+      <hr />
       </Collapse>
       <NavbarToggler onClick={() => toggleIsOpen(!isOpen)}>
         <div className="filter-btn">
           <img src={Icon} alt="filter" />
-          <span>Filters</span>
+          <span>Filtros</span>
         </div>
       </NavbarToggler>
     </>

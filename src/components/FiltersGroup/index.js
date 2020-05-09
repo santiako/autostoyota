@@ -104,7 +104,6 @@ function FiltersGroup({
         </DropdownMenu>
     </Dropdown>
     }
-      <hr />
     </div>
   );
 }
@@ -116,7 +115,7 @@ FiltersGroup.defaultProps = {
   onChange: () => {},
   options: [],
   value: null,
-  tipo: 'drop'
+  tipo: 'radio'
 };
 
 FiltersGroup.propTypes = {

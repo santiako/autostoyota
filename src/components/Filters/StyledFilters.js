@@ -38,10 +38,13 @@ const StyledFilters = createGlobalStyle`
     background: white;
     z-index: 1;
     .filters-wrapper {
+      padding: 0!important;
       ul {
-        max-height: 35vh;
+        //max-height: 35vh;
         overflow-y: scroll;
         position: relative;
+        margin: -29px 0 0 100px;
+
         &::-webkit-scrollbar-track {
           border-radius: 10px;
           position: absolute;
@@ -67,14 +70,19 @@ const StyledFilters = createGlobalStyle`
       padding-bottom: ${sizes.margin * 1.5}px;
     }
     hr {
-      margin: ${sizes.margin * 2.8}px 0 ${sizes.margin * 3}px 0;
-      border-color: ${colors.greyBorder};
+      margin: ${sizes.margin * 1}px 0 ${sizes.margin * 6}px 0;
+      border-color: #d8d8d8;
     }
     p {
       ${fonts.bold};
-      padding-bottom: ${sizes.margin * 1.5}px;
+      //padding-bottom: ${sizes.margin * 1.5}px;
+      width: 130px;
       color: ${colors.black};
-      font-size: 16px;
+      font-size: 14px;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1;
+      letter-spacing: 0.08px;
     }
   }
 
@@ -128,9 +136,18 @@ const StyledFilters = createGlobalStyle`
 
   // Dropdown menu
   .dropdown-toggle {
+    ${fonts.bold};
     border: none;
     background: none;
     color: ${colors.black};
+
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 0.08px;
+    //text-align: right;
 
     &:hover, &:focus {
         background: none;
@@ -140,11 +157,15 @@ const StyledFilters = createGlobalStyle`
   }
 
    .dropdown {
-        button[type=button][aria-expanded=true] {
-            border: none;
-            background: none;
-            color: ${colors.black};
-        }
+     float: right;
+     position: relative;
+     margin: -32px 0 0 0;
+
+     button[type=button][aria-expanded=true] {
+        border: none;
+        background: none;
+        color: ${colors.black};
+     }
     }
 
   .dropdown-menu {
@@ -196,19 +217,3 @@ const StyledFilters = createGlobalStyle`
 `;
 
 export default StyledFilters;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

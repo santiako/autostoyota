@@ -111,7 +111,6 @@ const Restaurant = createGlobalStyle`
       }
     }
 
-
     @media (min-width: ${sizes.tablet}) {
       .intro-wrapper {
         padding: ${sizes.margin * 5.8}px 0 0 0;
@@ -156,15 +155,3 @@ const Restaurant = createGlobalStyle`
 `;
 
 export default Restaurant;
-
-
-
-
-
-
-
-
-
-
-
-

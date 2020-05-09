@@ -15,13 +15,20 @@ const Restaurants = createGlobalStyle`
       position: relative;
     }
     H1 {
-        margin: ${sizes.margin * 5}px 0 ${sizes.margin * 4}px 0;
+        margin: ${sizes.margin * 4}px 0 ${sizes.margin * 6}px 0;
+    }
+    H4 {
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.07;
+      letter-spacing: -0.65px;
     }
     .restaurants-wrapper {
+      padding-right: ${sizes.margin * 3.3}px;
       ul:not(.pagination) {
         margin-top: ${sizes.margin * 2.6}px;
         li.column {
-          padding-bottom: ${sizes.margin * 7.6}px;
+          padding-bottom: ${sizes.margin * 4}px;
         }
       }
     }
@@ -67,7 +74,7 @@ const Restaurants = createGlobalStyle`
       }
     }
     @media (min-width: ${sizes.desktop}) {
-      padding-bottom: ${sizes.margin * 3.8}px;
+      padding-bottom: ${sizes.margin * 6}px;
       .navbar-toggler {
         display: none;
       }
@@ -81,7 +88,7 @@ const Restaurants = createGlobalStyle`
         }
         ul:not(.pagination) {
           li.column {
-            padding-bottom: ${sizes.margin * 8.1}px;
+            padding-bottom: ${sizes.margin * 4}px;
           }
         }
       }
