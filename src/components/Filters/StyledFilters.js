@@ -138,6 +138,15 @@ const StyledFilters = createGlobalStyle`
         box-shadow: none;
     }
   }
+
+   .dropdown {
+        button[type=button][aria-expanded=true] {
+            border: none;
+            background: none;
+            color: ${colors.black};
+        }
+    }
+
   .dropdown-menu {
     box-shadow: 2px 8px 20px 0 rgba(0, 0, 0, 0.15);
     //border-radius: 0;
@@ -166,10 +175,10 @@ const StyledFilters = createGlobalStyle`
         //content: '';
         position: absolute;
         left: 0;
-        bottom: 6px;
+        bottom: 0;
         //width: calc(100% + 17px);
         width: 100%;
-        height: 31px;
+        height: 100%;
         padding: ${sizes.margin * 0.2}px;
         text-align: center;
         border-radius: 0;

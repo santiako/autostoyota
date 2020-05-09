@@ -135,10 +135,10 @@ function RestaurantsPage({ location: { search }, history }) {
         name: 'orderby',
         options: [
             { id: 'name:asc', name: 'Nada' },
-            { id: 'precio:asc', name: 'De <bold>menor</bold> a <bold>mayor</bold> precio' },
-            { id: 'precio:desc', name: 'De <bold>mayor</bold> a <bold>menor</bold> precio' },
-            { id: 'anio:desc', name: 'Más <bold>nuevos</bold> primero' },
-            { id: 'anio:asc', name: 'Más <bold>viejos</bold> primero' } ],
+            { id: 'precio:asc', name: 'De <strong>menor</strong> a <strong>mayor</strong> precio' },
+            { id: 'precio:desc', name: 'De <strong>mayor</strong> a <strong>menor</strong> precio' },
+            { id: 'anio:desc', name: 'Más <strong>nuevos</strong> primero' },
+            { id: 'anio:asc', name: 'Más <strong>viejos</strong> primero' } ],
         value: orderby
       }
     ];

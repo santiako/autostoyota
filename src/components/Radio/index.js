@@ -35,8 +35,7 @@ function Radio({ checked, id, message, name, onChange, value, ...rest }) {
         {...rest}
         className="radio-custom"
       />
-      <label htmlFor={value} className="radio-custom-label">
-        {message.includes('_') ? message.replace('_', '') : message}
+      <label htmlFor={value} className="radio-custom-label" dangerouslySetInnerHTML={{__html: message.includes('_') ? message.replace('_', '') : message}}>
       </label>
     </>
   );

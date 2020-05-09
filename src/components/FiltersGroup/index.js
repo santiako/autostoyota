@@ -47,6 +47,7 @@ function FiltersGroup({
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen(prevState => !prevState);
+  const optLen = options.length;
 
 //    const handleChangeDrop = () => {
 //        const target = {
@@ -65,8 +66,9 @@ function FiltersGroup({
 
   return (
     <div>
-      <p>{title}</p>
       {(tipo == 'radio') ?
+      <>
+      <p>{title}</p>
       <ul>
         {options.map(option => {
           return (
@@ -81,11 +83,11 @@ function FiltersGroup({
             </li>
           );
         })}
-      </ul>:
+      </ul></>:
     <Dropdown isOpen={dropdownOpen} toggle={toggle}>
       <DropdownToggle caret>{ title }</DropdownToggle>
         <DropdownMenu>
-            {options.map(option => {
+            {options.map((option, i) => {
                 return (
                 <>
                 <Radio
@@ -95,8 +97,7 @@ function FiltersGroup({
                     value={option.id || option}
                     checked={value === option.id || value === option}
                   />
-
-                <DropdownItem divider />
+                {(optLen === i + 1) ? '' : <DropdownItem divider />}
                 </>
                 );
             })}
