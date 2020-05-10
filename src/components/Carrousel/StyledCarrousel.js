@@ -13,6 +13,12 @@ import colors from '../../assets/styles/colors';
 const StyledCarrousel = createGlobalStyle`
     .carr-wrapper {
         padding: 43px 0 49px 0;
+        .col-wrapper {
+            &:first-child,
+            &:last-child {
+                opacity: 0.3;
+            }
+        }
     }
 
     .leftarrow, .rightarrow {
@@ -28,7 +34,6 @@ const StyledCarrousel = createGlobalStyle`
     .leftarrow {
         float: left;
         left: 175px;
-        //top: ${sizes.carrousel.controls.top};
         img {
           -ms-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -37,7 +42,6 @@ const StyledCarrousel = createGlobalStyle`
     .rightarrow {
         float: right;
         right: 175px;
-        //top: ${sizes.carrousel.controls.top};
     }
 
     .dots-wrapper {

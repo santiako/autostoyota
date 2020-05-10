@@ -26,23 +26,47 @@ const Restaurant = createGlobalStyle`
         margin-left: -190px;
     }
     .imgleft {
-        margin: 0 0 0 auto;
+        margin: 0 30px 0 auto;
+        padding: 0 8px 0 0;
         max-width: 750px;
         min-width: 490px;
+        .img-wrapper {
+            img {
+                -webkit-transform: scaleX(-1);
+                transform: scaleX(-1);
+            }
+        }
     }
 
     .parrleft {
         margin: 3em auto 0 0;
+        padding: 0;
         max-width: 480px;
         min-width: 300px;
 
         .parr-wrapper {
             H1 {
-                margin-top: .2em;
+              margin-top: .2em;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.14;
+              letter-spacing: -1px;
+            }
+            H3 {
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.35;
+              letter-spacing: normal;
             }
             P {
-                margin-top: 2em;
-                max-width: 400px;
+              margin-top: 2em;
+              max-width: 400px;
+
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: 1.69;
+              letter-spacing: -0.1px;
             }
         }
     }
@@ -80,30 +104,48 @@ const Restaurant = createGlobalStyle`
 
     .info-wrapper {
         margin: 60px 0 117px 0;
-        .infocol-texleft {
+        .infocol-texleft, .infocol-texright {
             .parr-wrapper {
-                padding: 0 100px;
-                margin: 80px 0 auto 0;
-                max-width: 750px;
+                H3 {
+                  font-stretch: normal;
+                  font-style: normal;
+                  line-height: 1.35;
+                  letter-spacing: -0.4px;
+                }
+                p {
+                    margin-top: 13px;
+                }
+            }
+        }
+
+        .infocol-texleft {
+            margin-bottom: 55px;
+            .parr-wrapper {
+                padding: 0 75px;
+                margin: 70px auto 0 120px;
+                max-width: 620px;
+                min-width: 480px;
             }
             .img-wrapper {
-                max-width: 560px;
-                margin: 0 auto;
+                max-width: 530px;
+                min-width: 300px;
+                margin: 0 145px 0 auto;
             }
         }
         .infocol-texright {
             .img-wrapper {
-                max-width: 560px;
-                margin: 0 auto;
+                max-width: 530px;
+                min-width: 300px;
+                margin: 0 auto 0 145px;
             }
             .parr-wrapper {
-                padding: 0 100px;
-                margin: 80px 0 auto 0;
-                max-width: 750px;
+                padding: 0 75px;
+                margin: 70px 120px 0 auto;
+                max-width: 620px;
+                min-width: 480px;
             }
         }
     }
-
 
     .informations-wrapper {
       padding: ${sizes.margin * 2.1}px ${sizes.margin * 2}px;
