@@ -35,7 +35,7 @@ const RenderView = ({
 
   return (
     <div>
-    <Container fluid={true}>
+    <Container fluid={true} className="overflow-hidden">
         <Row style={{ margin: '2em auto 4em auto' }}>
             <Col md="6" className='imgleft'>
                 <div className="img-wrapper">
@@ -54,7 +54,7 @@ const RenderView = ({
             </Col>
         </Row>
 
-        <Row>
+        <Row className="slider-row">
           <div className="slider-wrapper2">
                 <Carrousel restaurant={{ ...restaurant }} />
           </div>

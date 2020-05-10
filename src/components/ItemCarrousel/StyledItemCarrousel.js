@@ -13,7 +13,9 @@ import fonts from '../../assets/styles/fonts';
 
 const StyledItemCarrousel = createGlobalStyle`
     .col-wrapper {
-        max-width: 270px;
+        //max-width: 270px;
+        max-width: 300px;
+        min-width: 200px;
         padding: 0 11px 0 11px;
 
         H3 {

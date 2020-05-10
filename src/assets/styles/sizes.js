@@ -32,6 +32,23 @@ const sizes = {
       size: '74px'
     }
   },
+  carrousel: {
+    height: {
+      small: '410px',
+      large: '410px'
+    },
+    controls: {
+      top: '20px',
+      width: {
+        small: '45px',
+        large: '45px'
+      },
+      height: {
+        small: '141px',
+        large: '141px'
+      }
+    }
+  },
   input: {
     height: '44px'
   },
