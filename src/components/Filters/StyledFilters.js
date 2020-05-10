@@ -147,12 +147,12 @@ const StyledFilters = createGlobalStyle`
     font-style: normal;
     line-height: 1;
     letter-spacing: 0.08px;
-    //text-align: right;
+    transition: none;
 
     &:hover, &:focus {
         background: none;
         color: ${colors.black};
-        box-shadow: none;
+        box-shadow: none!important;
     }
   }
 
@@ -170,7 +170,6 @@ const StyledFilters = createGlobalStyle`
 
   .dropdown-menu {
     box-shadow: 2px 8px 20px 0 rgba(0, 0, 0, 0.15);
-    //border-radius: 0;
     min-width: 12rem;
 
       .radio-custom-label {
@@ -193,11 +192,9 @@ const StyledFilters = createGlobalStyle`
       }
 
       .radio-custom + .radio-custom-label:before {
-        //content: '';
         position: absolute;
         left: 0;
         bottom: 0;
-        //width: calc(100% + 17px);
         width: 100%;
         height: 100%;
         padding: ${sizes.margin * 0.2}px;

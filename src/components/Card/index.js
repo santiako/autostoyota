@@ -29,6 +29,9 @@ function Card({ restaurant, onClick }) {
           alt="cover"
         />
       </div>
+      <div className="btn-wrapper">
+          <p>Ver Modelo</p>
+      </div>
     </StyledCard>
   );
 }

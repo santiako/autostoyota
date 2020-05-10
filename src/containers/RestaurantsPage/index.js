@@ -29,16 +29,12 @@ function RestaurantsPage({ location: { search }, history }) {
   const setSearch = (where, nextStart) => {
     history.push({
       search: `?category=${where.category}&orderby=${sortext}&start=${nextStart}`
-//      search: `?category=${where.category}&sort=anio:ASC&precio=${where.precio}&anio=${where.anio}&start=${nextStart}`
-      //search: `?category=${where.category}&start=${nextStart}`
     });
   };
 
   const getWhereParams = () => {
     const category = getQueryParameters(search, 'category') || 'all';
-    //const precio = getQueryParameters(search, 'orderby') || 'precio';
     const precio = getQueryParameters(search, 'precio') || 'all';
-    //const anio = getQueryParameters(search, 'orderby') || 'anio';
     const anio = getQueryParameters(search, 'anio') || 'all';
 
     return {
@@ -68,12 +64,6 @@ function RestaurantsPage({ location: { search }, history }) {
 
     // Si target.value = asc, ordena por precio ASC
     switch (trg.value) {
-//        case 'all':
-//            orderby = 'name';
-//            sortext = `${orderby}:asc`;
-//            trg.name = 'name:asc';
-//        break;
-
         case 'name:asc':
             orderby = 'name';
             sortext = `${orderby}:asc`;
@@ -99,13 +89,8 @@ function RestaurantsPage({ location: { search }, history }) {
             sortext = `${orderby}:asc`;
             trg.name = 'anio:asc';
         break;
-//        default:
-//            orderby = getQueryParameters(search, 'orderby') || 'name';
-//            sortext = `${orderby}:asc`;
-//            trg.name = 'name:asc';
     }
 
-    //alert('Name: ' + trg.name + ' Value: ' + trg.value + ' Orderby: ' + orderby);
     set(where, trg.name, trg.value);
     setSearch(where, 0);
   };
@@ -127,7 +112,7 @@ function RestaurantsPage({ location: { search }, history }) {
       {
         title: 'Filtrar por',
         name: 'category',
-        options: [{ id: 'all', name: 'todos' }, ...categories],
+        options: [{ id: 'all', name: 'Todos' }, ...categories],
         value: getQueryParameters(search, 'category') || 'all',
         tipo: 'radio'
       },

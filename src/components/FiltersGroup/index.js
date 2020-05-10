@@ -10,32 +10,6 @@ import PropTypes from 'prop-types';
 import Radio from '../Radio';
 
 
-//const Example = (props) => {
-//  const [dropdownOpen, setDropdownOpen] = useState(false);
-//
-//  const toggle = () => setDropdownOpen(prevState => !prevState);
-//
-//  return (
-//    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-//      <DropdownToggle caret>
-//        Dropdown
-//        </DropdownToggle>
-//      <DropdownMenu>
-//        <DropdownItem header>Header</DropdownItem>
-//        <DropdownItem>Some Action</DropdownItem>
-//        <DropdownItem disabled>Action (disabled)</DropdownItem>
-//        <DropdownItem divider />
-//        <DropdownItem>Foo Action</DropdownItem>
-//        <DropdownItem>Bar Action</DropdownItem>
-//        <DropdownItem>Quo Action</DropdownItem>
-//      </DropdownMenu>
-//    </Dropdown>
-//  );
-//}
-//
-//export default Example;
-
-
 function FiltersGroup({
   title,
   name,
@@ -48,21 +22,6 @@ function FiltersGroup({
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const toggle = () => setDropdownOpen(prevState => !prevState);
   const optLen = options.length;
-
-//    const handleChangeDrop = () => {
-//        const target = {
-//          name,
-//          value,
-//          type: 'radio',
-//          active: !active,
-//        };
-//
-//        onChange({ target });
-//    };
-
-//    <DropdownItem htmlFor={value} key={option.name || option}
-//        active={value === option.id || value === option} onClick={onChange}>{option.name || option}
-//    </DropdownItem>
 
   return (
     <div>
@@ -107,7 +66,6 @@ function FiltersGroup({
     </div>
   );
 }
-
 
 FiltersGroup.defaultProps = {
   title: '',

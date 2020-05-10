@@ -34,7 +34,7 @@ function CardSection({ restaurant, hasLink, history }) {
   return (
     <StyledCardSection className={hasLink && 'banner'}>
       <div className="left-infos">
-        {!hasLink ? <H4 inputColor="black">{name}</H4> : <H1 inputColor="black">{name}</H1>}
+        {!hasLink ? <H4>{name}</H4> : <H1 inputColor="black">{name}</H1>}
         <p className="description">
           {<P card inputColor={colors.blacknav}>{anio}&nbsp;|&nbsp; $&nbsp;{precio}</P>}
         </p>
@@ -42,27 +42,16 @@ function CardSection({ restaurant, hasLink, history }) {
 
     </StyledCardSection>
   );
-
-//          <div className="right-infos">
-//        <Rate value={Math.floor(note)} clickable={false} />
-//        {hasLink && (
-//          <div className="link-wrapper">
-//            <a onClick={goToReviews} className="link" role="navigation">
-//              <p>See all reviews</p>
-//            </a>
-//          </div>
-//        )}
-//      </div>
 }
 
 CardSection.defaultProps = {
   restaurant: restaurantDefaultShape,
-  hasLink: false,
+  hasLink: false
 };
 
 CardSection.propTypes = {
   restaurant: PropTypes.shape(restaurantShape),
-  hasLink: PropTypes.bool,
+  hasLink: PropTypes.bool
 };
 
 export default CardSection;

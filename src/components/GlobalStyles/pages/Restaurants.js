@@ -58,6 +58,7 @@ const Restaurants = createGlobalStyle`
         color: ${colors.mediumGrey};
       }
     }
+
     @media (min-width: ${sizes.tablet}) {
       padding: ${sizes.margin * 3.8}px ${sizes.margin * 2}px ${sizes.margin *
   4}px ${sizes.margin * 2}px;
@@ -73,6 +74,7 @@ const Restaurants = createGlobalStyle`
         }
       }
     }
+
     @media (min-width: ${sizes.desktop}) {
       padding-bottom: ${sizes.margin * 6}px;
       .navbar-toggler {
