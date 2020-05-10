@@ -21,6 +21,7 @@ function Header({ links }) {
       toggleIsOpen(!isOpen);
     }
   };
+  var pathname = window.location.pathname;
 
   return (
     <StyledHeader>
@@ -46,7 +47,7 @@ function Header({ links }) {
             <Link
               clase={links[1].clase}
               url={links[1].to}
-              active={window.location.pathname === links[1].to}
+              active={(pathname.search(/\d\/informations/) != -1) ? true : false}
             >
               <span title={links[1].name}>{links[1].name}</span>
             </Link>

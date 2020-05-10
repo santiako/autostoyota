@@ -40,7 +40,6 @@ const headerUrls = [
   { name: 'Innovación', to: '', clase: 'back' },
   { name: 'Prensa', to: '', clase: 'back' },
   { name: 'Acerca de...', to: '', clase: 'ulti back' }
-
 ];
 
 
@@ -52,8 +51,6 @@ function App() {
       <Header links={headerUrls} />
       <Switch>
         <Route path="/" component={RestaurantsPage} exact />
-        <Route path="/about" component={About} exact />
-        <Route path="/blog" component={Blog} exact />
         <Route path="/:id/:content" component={RestaurantPage} exact />
         <Route component={NotFound} />
       </Switch>
