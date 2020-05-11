@@ -26,10 +26,10 @@ const Restaurant = createGlobalStyle`
         margin-left: -190px;
     }
     .imgleft {
-        margin: 0 30px 0 auto;
-        padding: 0 8px 0 0;
+        margin: 0;
+        padding: 0;
         max-width: 750px;
-        min-width: 490px;
+        //min-width: 490px;
         .img-wrapper {
             img {
                 -webkit-transform: scaleX(-1);
@@ -46,20 +46,26 @@ const Restaurant = createGlobalStyle`
 
         .parr-wrapper {
             H1 {
-              margin-top: .2em;
+              font-size: 35px;
+              font-weight: 600;
+              line-height: 1.26;
+              letter-spacing: -0.7px;
+              color: #191919;
+
+              margin-top: 11px;
               font-stretch: normal;
               font-style: normal;
-              line-height: 1.14;
-              letter-spacing: -1px;
             }
             H3 {
+              font-size: 20px;
+              font-weight: 600;
               font-stretch: normal;
               font-style: normal;
               line-height: 1.35;
               letter-spacing: normal;
             }
             P {
-              margin-top: 2em;
+              margin-top: 19px;
               max-width: 400px;
 
               font-weight: normal;
@@ -154,6 +160,22 @@ const Restaurant = createGlobalStyle`
       h1 {
         padding: 0 0 ${sizes.margin * 1.4}px 0;
       }
+    }
+
+
+    @media (min-width: ${sizes.mobile}) {
+        .imgleft {
+            margin: 0 30px 0 auto;
+            padding: 0 8px 0 0;
+            max-width: 750px;
+            min-width: 490px;
+            .img-wrapper {
+                img {
+                    -webkit-transform: scaleX(-1);
+                    transform: scaleX(-1);
+                }
+            }
+        }
     }
 
     @media (min-width: ${sizes.tablet}) {
