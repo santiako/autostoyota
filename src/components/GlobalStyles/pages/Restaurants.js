@@ -63,17 +63,9 @@ const Restaurants = createGlobalStyle`
       padding: ${sizes.margin * 3.8}px ${sizes.margin * 2}px ${sizes.margin *
   4}px ${sizes.margin * 2}px;
 
-      .clickable-card {
-        .img-wrapper {
 
-        }
-        &:hover {
-          .img-wrapper {
-            // aparece el botón Ver Modelo
-          }
-        }
-      }
     }
+
 
     @media (min-width: ${sizes.desktop}) {
       padding-bottom: ${sizes.margin * 6}px;

@@ -17,8 +17,7 @@ const StyledCard = styled.div`
   .img-wrapper {
     width: 100%;
     height: ${sizes.article.img.height};
-    //margin-bottom: ${sizes.margin * 2}px;
-    background-color: ${colors.lightGrey};
+    //background: none;
   }
   .btn-wrapper {
     display: none;
@@ -48,6 +47,29 @@ const StyledCard = styled.div`
         display: block;
     }
   }
+
+
+    @media (max-width: 1200px) {
+        .img-wrapper {
+            height: 115px;
+        }
+    }
+    @media (max-width: 1023px) {
+        .img-wrapper {
+            height: 160px;
+            img {
+                object-fit: contain;
+            }
+        }
+    }
+    @media (max-width: ${sizes.tablet}) {
+        .img-wrapper {
+            height: 230px;
+            img {
+                object-fit: cover;
+            }
+        }
+    }
 `;
 
 export default StyledCard;
