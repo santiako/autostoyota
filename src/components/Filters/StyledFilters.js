@@ -31,14 +31,19 @@ const StyledFilters = createGlobalStyle`
     }
   }
 
-  .filters-collapse {
+  .filteradio {
+    display: none;
+  }
+
+  .filteradio {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     background: white;
     z-index: 1;
-    .filters-wrapper {
+
+    //.filters-wrapper {
       padding: 0!important;
       ul {
         overflow-y: scroll;
@@ -65,7 +70,7 @@ const StyledFilters = createGlobalStyle`
           background-color: ${colors.mediumGrey};
         }
       }
-    }
+    //}
     h1 {
       padding-bottom: ${sizes.margin * 1.5}px;
     }
@@ -157,15 +162,23 @@ const StyledFilters = createGlobalStyle`
      float: right;
      position: relative;
      margin: -32px 0 0 0;
-     &.fleft {
-        float: left;
-     }
+//     &.fleft {
+//        float: left;
+//     }
 
      button[type=button][aria-expanded=true] {
         border: none;
         background: none;
         color: ${colors.black};
      }
+    }
+
+    .filterdrop {
+        &.fleft {
+            .dropdown {
+                float: left;
+            }
+        }
     }
 
   .dropdown-menu {
@@ -210,6 +223,53 @@ const StyledFilters = createGlobalStyle`
         margin: 0;
       }
   }
+
+    @media (min-width: ${sizes.tablet}) {
+        // Si el ancho es > que tablet...
+        .fcat {
+            display: block;
+        }
+        .filterdrop.fleft {
+            display: none;
+        }
+    }
+
+    @media (max-width: ${sizes.tablet}) {
+        // Si el ancho es < que tablet...
+        .filteradio.fcat {
+            display: none;
+        }
+        .filterdrop, .filterdrop.fleft {
+            display: block;
+        }
+    }
 `;
 
 export default StyledFilters;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

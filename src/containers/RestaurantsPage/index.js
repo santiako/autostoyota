@@ -114,7 +114,7 @@ function RestaurantsPage({ location: { search }, history }) {
         name: 'category',
         options: [{ id: 'all', name: 'Todos' }, ...categories],
         value: getQueryParameters(search, 'category') || 'all',
-        tipo: 'drop'
+        tipo: 'radio'
       },
       {
         title: 'Ordenar por',

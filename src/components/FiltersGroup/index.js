@@ -25,10 +25,14 @@ function FiltersGroup({
 
 
 // {(title == "Filtrar por") ? "true" : "false"}
+// {(title === "Filtrar por") ? "fleft" : ""}
+// (tipo == 'radio' && window.innerWidth > 767)
+
+// si el filtro es de tipo radio y el ancho de la ventana es >        767 muestra el filtro desplegado
   return (
     <div>
-      {(tipo == 'radio') ?
-      <>
+
+      <div className={"filteradio " + ((title === "Filtrar por") ? "fcat" : "")}>
       <p>{title}</p>
       <ul>
         {options.map(option => {
@@ -44,9 +48,11 @@ function FiltersGroup({
             </li>
           );
         })}
-      </ul></>:
-    <Dropdown isOpen={dropdownOpen} toggle={toggle}
-        className={(title === "Filtrar por") ? "fleft" : ""}>
+      </ul>
+      </div>
+
+    <div className={"filterdrop " + ((title === "Filtrar por") ? "fleft" : "")}>
+    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
       <DropdownToggle caret>{ title }</DropdownToggle>
       <DropdownMenu flip="false" right={title === "Ordenar por"}>
         {options.map((option, i) => {
@@ -65,7 +71,7 @@ function FiltersGroup({
         })}
       </DropdownMenu>
       </Dropdown>
-    }
+    </div>
     </div>
   );
 }
