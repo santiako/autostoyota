@@ -9,12 +9,6 @@ import PropTypes from 'prop-types';
 
 const StyledRadio = styled.input`
   display: none;
-
-//  background-color: red;
-//
-//  &:hover input ~ .checkmark {
-//    background-color: #ccc;
-//  }
 `;
 
 StyledRadio.defaultProps = {

@@ -30,6 +30,7 @@ const StyledFilters = createGlobalStyle`
       }
     }
   }
+
   .filters-collapse {
     position: absolute;
     top: 0;
@@ -40,7 +41,6 @@ const StyledFilters = createGlobalStyle`
     .filters-wrapper {
       padding: 0!important;
       ul {
-        //max-height: 35vh;
         overflow-y: scroll;
         position: relative;
         margin: -29px 0 0 100px;
@@ -94,14 +94,13 @@ const StyledFilters = createGlobalStyle`
   }
   .radio-custom-label {
     position: relative;
+    font-family: 'Montserrat';
     margin-bottom: 0;
     padding-left: ${sizes.margin * 2}px;
     font-size: 14px;
     line-height: normal;
     color: ${colors.black};
-    //text-transform: capitalize;
 
-    font-family: ${fonts.reg};
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -109,6 +108,7 @@ const StyledFilters = createGlobalStyle`
     letter-spacing: 0.08px;
     text-align: center;
   }
+
   .radio-custom {
     position: absolute;
     opacity: 0;
@@ -123,14 +123,11 @@ const StyledFilters = createGlobalStyle`
     padding: ${sizes.margin * 0.2}px;
     text-align: center;
     border-radius: 18px;
-    //background: #fff;
-    //border: 1px solid ${colors.darkBlue};
   }
   .radio-custom:checked + .radio-custom-label:before,
   .radio-custom:hover + .radio-custom-label:before {
     z-index: -1;
     background: #f7f7f7;
-    //box-shadow: inset 0px 0px 0px 2px #fff;
   }
 
 
@@ -160,6 +157,9 @@ const StyledFilters = createGlobalStyle`
      float: right;
      position: relative;
      margin: -32px 0 0 0;
+     &.fleft {
+        float: left;
+     }
 
      button[type=button][aria-expanded=true] {
         border: none;
@@ -205,7 +205,6 @@ const StyledFilters = createGlobalStyle`
       .radio-custom:hover + .radio-custom-label:before {
         z-index: -1;
         background: #f7f7f7;
-        //box-shadow: inset 0px 0px 0px 2px #fff;
       }
       .dropdown-divider {
         margin: 0;

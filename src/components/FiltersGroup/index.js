@@ -23,6 +23,8 @@ function FiltersGroup({
   const toggle = () => setDropdownOpen(prevState => !prevState);
   const optLen = options.length;
 
+
+// {(title == "Filtrar por") ? "true" : "false"}
   return (
     <div>
       {(tipo == 'radio') ?
@@ -43,25 +45,26 @@ function FiltersGroup({
           );
         })}
       </ul></>:
-    <Dropdown isOpen={dropdownOpen} toggle={toggle}>
+    <Dropdown isOpen={dropdownOpen} toggle={toggle}
+        className={(title === "Filtrar por") ? "fleft" : ""}>
       <DropdownToggle caret>{ title }</DropdownToggle>
-        <DropdownMenu>
-            {options.map((option, i) => {
-                return (
-                <>
-                <Radio
-                    onChange={onChange}
-                    name={name}
-                    message={option.name || option}
-                    value={option.id || option}
-                    checked={value === option.id || value === option}
-                  />
-                {(optLen === i + 1) ? '' : <DropdownItem divider />}
-                </>
-                );
-            })}
-        </DropdownMenu>
-    </Dropdown>
+      <DropdownMenu flip="false" right={title === "Ordenar por"}>
+        {options.map((option, i) => {
+            return (
+            <>
+            <Radio
+                onChange={onChange}
+                name={name}
+                message={option.name || option}
+                value={option.id || option}
+                checked={value === option.id || value === option}
+              />
+            {(optLen === i + 1) ? '' : <DropdownItem divider />}
+            </>
+            );
+        })}
+      </DropdownMenu>
+      </Dropdown>
     }
     </div>
   );
@@ -83,6 +86,10 @@ FiltersGroup.propTypes = {
   options: PropTypes.array,
   value: PropTypes.string,
   tipo: PropTypes.string
+};
+
+DropdownMenu.propTypes = {
+  right: PropTypes.bool
 };
 
 export default FiltersGroup;

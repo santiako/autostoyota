@@ -9,13 +9,20 @@ const Restaurants = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap');
 
   #restaurants-page {
-    padding: ${sizes.margin * 1.9}px ${sizes.margin * 2}px;
+    padding: ${sizes.margin * 1.9}px ${sizes.margin * 1.5}px;
 
     .container {
       position: relative;
     }
     H1 {
         margin: ${sizes.margin * 4}px 0 ${sizes.margin * 6}px 0;
+        font-size: 35px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.26;
+        letter-spacing: -0.7px;
+        color: ${colors.blacknav};
     }
     H4 {
       font-stretch: normal;
@@ -24,11 +31,10 @@ const Restaurants = createGlobalStyle`
       letter-spacing: -0.65px;
     }
     .restaurants-wrapper {
-      padding-right: ${sizes.margin * 3.3}px;
       ul:not(.pagination) {
         margin-top: ${sizes.margin * 2.6}px;
         li.column {
-          padding-bottom: ${sizes.margin * 4}px;
+          padding-bottom: ${sizes.margin * 2}px;
         }
       }
     }
@@ -59,13 +65,19 @@ const Restaurants = createGlobalStyle`
       }
     }
 
-    @media (min-width: ${sizes.tablet}) {
-      padding: ${sizes.margin * 3.8}px ${sizes.margin * 2}px ${sizes.margin *
-  4}px ${sizes.margin * 2}px;
+    @media (min-width: ${sizes.mobile}) {
+      padding: ${sizes.margin * 3.8}px ${sizes.margin * 2}px ${sizes.margin * 4}px ${sizes.margin * 2}px;
 
-
+      ul:not(.pagination) {
+        li.column {
+          padding-bottom: ${sizes.margin * 4}px;
+        }
+      }
     }
 
+    @media (min-width: ${sizes.tablet}) {
+      padding: ${sizes.margin * 3.8}px ${sizes.margin * 2}px ${sizes.margin * 4}px ${sizes.margin * 2}px;
+    }
 
     @media (min-width: ${sizes.desktop}) {
       padding-bottom: ${sizes.margin * 6}px;
@@ -76,6 +88,7 @@ const Restaurants = createGlobalStyle`
         display: inline-block;
         vertical-align: top;
         width: 100%;
+        padding-right: ${sizes.margin * 3.3}px;
 
         h1 {
           padding-left: ${sizes.margin * 3}px;

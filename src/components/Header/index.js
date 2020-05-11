@@ -47,7 +47,7 @@ function Header({ links }) {
             <Link
               clase={links[1].clase}
               url={links[1].to}
-              active={(pathname.search(/\d\/informations/) != -1) ? true : false}
+              active={(pathname.search(/\d\/informations/) !== -1) ? true : false}
             >
               <span title={links[1].name}>{links[1].name}</span>
             </Link>
