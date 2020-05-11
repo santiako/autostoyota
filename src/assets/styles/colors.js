@@ -6,6 +6,7 @@ const colors = {
   lightGrey: '#e7e7e7',
   backMenu: '#efeeef',
   greySlider: '#f7f7f7',
+  greyBorBot: '#d8d8d8',
   darkGrey: '#969696',
   black: '#373737',
   blacknav: '#191919',

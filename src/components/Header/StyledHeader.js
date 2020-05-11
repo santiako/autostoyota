@@ -13,26 +13,65 @@ import fonts from '../../assets/styles/fonts';
 const StyledHeader = styled.div`
   .navbar {
     position: relative;
-    height: ${sizes.header.height.small};
+    height: ${sizes.header.height.large};
     padding: 0 ${sizes.header.padding};
     background-color: white;
+    border-bottom: 1px solid ${colors.greyBorBot};
+
+    .container {
+        justify-content: flex-start;
+    }
+    .container,
+    .collapse, ul {
+        height: 100%;
+        margin: 0;
+    }
+    .navbar-collapse {
+        height: initial;
+        width: 100%;
+    }
+    .navbar-brand {
+      margin-left: ${sizes.margin * 1.5}px;
+      img {
+        width: 40px;
+      }
+      a {
+        padding: 0;
+      }
+    }
+    .staticnav {
+        display: none;
+    }
   }
+
 
   // Animated hamburger icon
   .navbar-toggler {
     position: absolute;
-    top: ${sizes.header.padding};
-    right: 0;
-    padding: 0 ${sizes.header.padding};
+    margin: 0;
+    top: 17px;
+    right: 4px;
+    padding: 11px;
     border: 0;
-    .nav-cerrar {
-        display: none;
 
+    p.nav-cerrar {
+        display: none;
+        position: relative;
+        top: -2px;
+        right: 46px;
+        font-family: ${fonts.reg};
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: ${colors.blacknav};
     }
     .nav-icon {
       position: relative;
       width: 20px;
-      height: 13px;
+      //height: 13px;
       transform: rotate(0deg);
       transition: 0.15s ease-in-out;
       cursor: pointer;
@@ -42,8 +81,8 @@ const StyledHeader = styled.div`
       right: 0;
       display: block;
       width: 100%;
-      height: 1px;
-      background: ${colors.darkBlue};
+      height: 2px;
+      background: ${colors.blacknav};
       border-radius: 100px;
       opacity: 1;
       transform: rotate(0deg);
@@ -68,14 +107,12 @@ const StyledHeader = styled.div`
     right: 0;
     z-index: 99;
     width: 365px;
-    //padding: 0 0 20px 0;
     background-color: white;
     li {
       a {
         padding: 7px 45px 7px 0;
         &.bortop {
             padding: 27px 45px 7px 0;
-            //border-bottom: 1px solid ${colors.lightGrey};
         }
         &.borbot {
             padding: 7px 25px 27px 0;
@@ -116,22 +153,7 @@ const StyledHeader = styled.div`
     }
   }
 
-
   .navbar-collapse.show + button {
-    p.nav-cerrar {
-        font-size: 14px;
-        font-family: Montserrat;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        color: #000000;
-    }
-    .nav-cerrar {
-        display: block;
-        margin: -15px 20px 0 -55px;
-    }
     .nav-icon span:nth-child(1) {
       top: 18px;
       width: 0%;
@@ -151,28 +173,42 @@ const StyledHeader = styled.div`
   }
 
 
-
-  // Tablet
-  @media (min-width: ${sizes.tablet}) {
+  // Mobile
+  @media (min-width: ${sizes.mobile}) {
     .navbar {
-      height: ${sizes.header.height.large};
-
-      .container,
-      .collapse, ul {
-        height: 100%;
-        margin: 0;
-      }
+        .navbar-brand {
+          margin-left: ${sizes.margin * 3.5}px;
+        }
+        // Desplegable en todos los tamaños
+        .navbar-collapse {
+            width: 365px;
+            .navbar-nav {
+                display: none;
+                flex-direction: column;
+            }
+        }
+        .navbar-toggler {
+            margin: 0;
+            top: 27px;
+            right: 13px;
+            padding: 0;
+            p.nav-cerrar {
+                display: block;
+            }
+        }
+        .staticnav {
+            display: flex;
+        }
     }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+
     .navbar-brand,
     .navbar-collapse {
       display: inline-block;
       vertical-align: top;
-    }
-    .navbar-brand {
-      margin-left: ${sizes.margin * 3.5}px;
-      img {
-        width: 40px;
-      }
     }
 
     .navbar-expand-md .navbar-toggler {
@@ -183,7 +219,7 @@ const StyledHeader = styled.div`
       position: relative;
       top: inherit;
       left: inherit;
-      width: inherit;
+      width: 365px;
       padding: 0;
       //border-left: 1px solid ${colors.greyBorder};
 
@@ -191,7 +227,7 @@ const StyledHeader = styled.div`
         display: table-cell;
         padding: 0 30px;
         a {
-          margin: 7px auto;
+          //margin: 7px auto;
           padding: 0;
           position: relative;
           display: flex;
@@ -243,6 +279,103 @@ const StyledHeader = styled.div`
         }
       }
     }
+  .navbar-collapse.show + button {
+    .nav-cerrar {
+        display: block;
+    }
+  }
+}
+
+  // Tablet
+  @media (min-width: ${sizes.tablet}) {
+    .navbar {
+      //height: ${sizes.header.height.large};
+        .navbar-brand {
+          margin-left: ${sizes.margin * 3.5}px;
+        }
+        .staticnav {
+            display: flex;
+        }
+    }
+    .navbar-brand,
+    .navbar-collapse {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .navbar-collapse {
+        .navbar-nav {
+            display: none;
+        }
+    }
+    .navbar-expand-md .navbar-toggler {
+        display: block;
+    }
+
+    .navbar-collapse, .navbar-nav {
+      position: relative;
+      top: inherit;
+      left: inherit;
+      width: 365px;
+      padding: 0;
+      //border-left: 1px solid ${colors.greyBorder};
+
+      li {
+        display: table-cell;
+        padding: 0 30px;
+        a {
+          //margin: 7px auto;
+          padding: 0;
+          position: relative;
+          display: flex;
+          height: 100%;
+          color: ${colors.blacknav};
+
+          span {
+            margin: auto;
+            line-height: 17px;
+            color: ${colors.blacknav};
+            ${fonts.bold};
+            font-size: 14px;
+            text-align: center;
+            letter-spacing: normal;
+            width: 125px;
+
+            ::after {
+              display: block;
+              content: attr(title);
+              height: 0;
+              overflow: hidden;
+              visibility: hidden;
+              font-weight: bold;
+            }
+          }
+          &:after {
+            content: ' ';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            border: 2px solid transparent;
+          }
+
+          &.active,
+          &:hover {
+            span {
+                color: ${colors.redtext};
+            }
+            &:after {
+              border-color: ${colors.red};
+            }
+          }
+        }
+        a,
+        &:last-of-type a {
+          border-bottom: 0;
+        }
+      }
+    }
+    }
 
     // Escritorio
     @media (min-width: ${sizes.desktop}) {
@@ -274,7 +407,6 @@ const StyledHeader = styled.div`
         }
       }
     }
-  }
 `;
 
 export default StyledHeader;

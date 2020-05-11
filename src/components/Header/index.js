@@ -33,7 +33,7 @@ function Header({ links }) {
             </Link>
           </div>
 
-        <Nav navbar>
+        <Nav navbar className="staticnav">
           <NavItem key={links[0].to}>
             <Link
               clase={links[0].clase}
@@ -79,7 +79,7 @@ function Header({ links }) {
               <span />
               <span />
             </div>
-            <p className="nav-cerrar">Cerrar</p>
+            <p className="nav-cerrar">Menú</p>
           </NavbarToggler>
         </div>
       </Navbar>
