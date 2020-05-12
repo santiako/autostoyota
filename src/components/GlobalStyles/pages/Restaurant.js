@@ -22,8 +22,8 @@ const Restaurant = createGlobalStyle`
       }
     }
     .slider-row {
-        margin-right: -190px;
-        margin-left: -190px;
+        margin-right: -328px;
+        margin-left: -328px;
     }
     .imgleft {
         margin: 0;
@@ -164,6 +164,12 @@ const Restaurant = createGlobalStyle`
 
 
     @media (min-width: ${sizes.mobile}) {
+        #restaurant-page {
+            .slider-row {
+                margin-right: -190px;
+                margin-left: -190px;
+            }
+        }
         .imgleft {
             margin: 0 30px 0 auto;
             padding: 0 8px 0 0;

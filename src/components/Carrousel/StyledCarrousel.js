@@ -51,6 +51,12 @@ const StyledCarrousel = createGlobalStyle`
             object-fit: contain;
         }
     }
+
+    @media (max-width: ${sizes.mobile}) {
+        .leftarrow, .rightarrow {
+            display: none;
+        }
+    }
 `;
 
 export default StyledCarrousel;
