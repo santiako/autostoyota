@@ -20,6 +20,7 @@ function Card({ restaurant, onClick }) {
   const { id, cover } = restaurant;
   const coverURL = cover[0] ? cover[0].url : '';
 
+// lalal
   return (
     <StyledCard onClick={() => onClick(id)} className="clickable-card">
       <CardSection restaurant={restaurant} />
