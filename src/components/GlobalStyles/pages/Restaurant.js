@@ -193,13 +193,28 @@ const Restaurant = createGlobalStyle`
       }
     }
 
-
+    // A partir del ancho mobile
     @media (min-width: ${sizes.mobile}) {
-        #restaurant-page {
-            .slider-row {
-                margin-right: -190px;
-                margin-left: -190px;
+        .parrleft {
+            .parr-wrapper P {
+                max-width: none;
             }
+            max-width: none;
+
+            // margin: 3em auto 0 0;
+            // padding: 0;
+            // max-width: 480px;
+            // min-width: 300px;
+        }
+
+        #restaurant-page {
+            .container {
+                max-width: none;
+            }
+        .slider-row {
+            margin-right: -190px;
+            margin-left: -190px;
+        }
         .slider-wrapper2 {
             width: 100%;
             height: 410px;
