@@ -36,7 +36,7 @@ const RenderView = ({
   return (
     <div>
     <Container fluid={true} className="overflow-hidden">
-        <Row style={{ margin: '2em auto 4em auto' }}>
+        <Row className="cabecera-row">
             <Col md="6" className='imgleft'>
                 <div className="img-wrapper">
                     <Img
@@ -63,13 +63,13 @@ const RenderView = ({
         <div className="info-wrapper">
             <div className="infocol-texleft">
                 <Row>
-                    <Col>
+                    <Col className="parr1">
                         <div className="parr-wrapper">
                             <H3>{ titulo20px }</H3>
                             <P>{ description }</P>
                         </div>
                     </Col>
-                    <Col>
+                    <Col className="img1">
                         <div className="img-wrapper">
                             <Img
                             src={`${process.env.REACT_APP_BACKEND_URL}${autoabajo.url}`}
@@ -81,14 +81,14 @@ const RenderView = ({
 
             <div className="infocol-texright">
                 <Row>
-                    <Col>
+                    <Col className="img2">
                         <div className="img-wrapper">
                         <Img
                             src={`${process.env.REACT_APP_BACKEND_URL}${autoabajo2.url}`}
                            />
                         </div>
                     </Col>
-                    <Col>
+                    <Col className="parr2">
                         <div className="parr-wrapper">
                           <H3>{ titulo20px }</H3>
                           <P>{ description }</P>

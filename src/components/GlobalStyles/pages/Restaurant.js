@@ -21,6 +21,11 @@ const Restaurant = createGlobalStyle`
         }
       }
     }
+    .cabecera-row {
+        //margin: '2em auto 4em auto';
+        margin: 40px auto 38px auto;
+    }
+
     .slider-row {
         margin-right: -328px;
         margin-left: -328px;
@@ -104,33 +109,57 @@ const Restaurant = createGlobalStyle`
 
     .slider-wrapper2 {
         width: 100%;
-        height: 410px;
+        height: 452px;
         background-color: ${colors.greySlider};
+        .carr-wrapper {
+          .row:nth-child(3) {
+              .col-wrapper:nth-child(4), 
+              .col-wrapper:nth-child(5), .col-wrapper:nth-child(6) {
+                  display: none;
+              }
+          }
+        }
     }
 
     .info-wrapper {
-        margin: 60px 0 117px 0;
+        //margin: 60px 0 117px 0;
+        margin: 40px 0 79px 0;
         .infocol-texleft, .infocol-texright {
             .parr-wrapper {
                 H3 {
+                  margin-top: 21px;
                   font-stretch: normal;
                   font-style: normal;
                   line-height: 1.35;
                   letter-spacing: -0.4px;
+
+                  font-size: 20px;
+                  line-height: 1.35;
+                  letter-spacing: -0.4px;
                 }
                 p {
-                    margin-top: 13px;
+                    margin-top: 20px;
                 }
             }
         }
 
         .infocol-texleft {
-            margin-bottom: 55px;
+            margin-bottom: 39px;
+            .parr1 {
+                order: 2;
+            }
+            .img1 {
+                order: 1;
+                .img-wrapper {
+                    margin: 0;
+                }
+            }
+
             .parr-wrapper {
-                padding: 0 75px;
-                margin: 70px auto 0 120px;
+                //padding: 0 75px;
+                //margin: 70px auto 0 120px;
                 max-width: 620px;
-                min-width: 480px;
+                //min-width: 480px;
             }
             .img-wrapper {
                 max-width: 530px;
@@ -138,17 +167,19 @@ const Restaurant = createGlobalStyle`
                 margin: 0 145px 0 auto;
             }
         }
+
         .infocol-texright {
             .img-wrapper {
                 max-width: 530px;
                 min-width: 300px;
-                margin: 0 auto 0 145px;
+                //margin: 0 auto 0 145px;
+                margin: 0;
             }
             .parr-wrapper {
-                padding: 0 75px;
-                margin: 70px 120px 0 auto;
+                //padding: 0 75px;
+                //margin: 70px 120px 0 auto;
                 max-width: 620px;
-                min-width: 480px;
+                //min-width: 480px;
             }
         }
     }
@@ -169,6 +200,10 @@ const Restaurant = createGlobalStyle`
                 margin-right: -190px;
                 margin-left: -190px;
             }
+        .slider-wrapper2 {
+            width: 100%;
+            height: 410px;
+            background-color: ${colors.greySlider};
         }
         .imgleft {
             margin: 0 30px 0 auto;
@@ -185,6 +220,34 @@ const Restaurant = createGlobalStyle`
     }
 
     @media (min-width: ${sizes.tablet}) {
+      .cabecera-row {
+          margin: '2em auto 4em auto';
+      }
+      .info-wrapper {
+          .infocol-texleft {
+              .parr1 {
+                  order: inherit;
+              }
+              .img1 {
+                  order: inherit;
+              }
+              .parr-wrapper {
+                padding: 0 75px;
+                margin: 70px auto 0 120px;
+                max-width: 620px;
+                min-width: 480px;
+              }
+          }
+
+          .infocol-texright {
+              .parr-wrapper {
+                padding: 0 75px;
+                margin: 70px 120px 0 auto;
+                max-width: 620px;
+                min-width: 480px;
+              }
+          }
+      }
       .intro-wrapper {
         padding: ${sizes.margin * 5.8}px 0 0 0;
         ul {
