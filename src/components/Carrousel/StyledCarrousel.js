@@ -46,7 +46,7 @@ const StyledCarrousel = createGlobalStyle`
 
     .dots-wrapper {
         width: 95px;
-        margin: 20px auto 0 auto;
+        margin: 0 auto 49px auto;
         Img {
             object-fit: contain;
         }
