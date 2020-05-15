@@ -108,6 +108,16 @@ const Restaurant = createGlobalStyle`
       }
     }
 
+    @media (max-width: ${sizes.desktop}) {
+      .carr-wrapper {
+        .row:nth-child(3) {
+            .col-wrapper {
+                display: block;
+            }
+        }
+      }
+    }
+
     .slider-wrapper2 {
         width: 100%;
         height: 452px;
@@ -197,7 +207,8 @@ const Restaurant = createGlobalStyle`
     // A partir del ancho mobile
     @media (min-width: ${sizes.mobile}) {
         .imgleft {
-            min-width: 550px;
+            //min-width: 550px;
+            min-width: none;
         }
         .infocol-texleft {
             margin-bottom: 39px;
@@ -227,11 +238,6 @@ const Restaurant = createGlobalStyle`
             // min-width: 300px;
         }
 
-        #restaurant-page {
-            .container {
-                max-width: none;
-            }
-        }
         .slider-row {
             margin-right: -190px;
             margin-left: -190px;
@@ -272,7 +278,7 @@ const Restaurant = createGlobalStyle`
         .carr-wrapper {
           .row:nth-child(3) { 
               .col-wrapper:nth-child(4), .col-wrapper:nth-child(5), .col-wrapper:nth-child(6) {
-                  display: none!important;
+                  display: none;
               }
           }
         }
@@ -283,6 +289,9 @@ const Restaurant = createGlobalStyle`
     @media (min-width: ${sizes.tablet}) {
       .cabecera-row {
           margin: '2em auto 4em auto';
+      }
+      .imgleft {
+          min-width: 550px;
       }
       .parrleft {
           margin: 3em auto 0 0;
@@ -321,7 +330,6 @@ const Restaurant = createGlobalStyle`
           //max-width: none;
       }
 
-
       .info-wrapper {
           .infocol-texleft {
               margin-bottom: 55px;
@@ -354,7 +362,7 @@ const Restaurant = createGlobalStyle`
               .parr-wrapper {
                 padding: 0 100px 0 60px;
                 //margin: 60px 120px 0 auto;
-                margin: 70px auto;
+                margin: 61px auto;
                 max-width: 552px;
                 min-width: 500px;
               }
@@ -375,13 +383,12 @@ const Restaurant = createGlobalStyle`
           height: 410px;
           .carr-wrapper {
             .row:nth-child(3) {
-                // .col-wrapper:nth-child(4), 
-                // .col-wrapper:nth-child(5), .col-wrapper:nth-child(6) {
-                //     display: block!important;
-                // }
-                .col-wrapper {
+                .col-wrapper:nth-child(6) {
                     display: block!important;
                 }
+                // .col-wrapper {
+                //     display: block!important;
+                // }
             }
           }
       }
@@ -389,8 +396,7 @@ const Restaurant = createGlobalStyle`
       .informations-wrapper {
         padding: ${sizes.margin * 10}px 0 ${sizes.margin * 0.3}px 0;
         h1 {
-          padding: ${sizes.margin * 2}px 0 ${sizes.margin *
-  2.8}px calc(40% + ${sizes.margin * 3}px);
+          padding: ${sizes.margin * 2}px 0 ${sizes.margin * 2.8}px calc(40% + ${sizes.margin * 3}px);
         }
 
         li.column {
@@ -412,6 +418,34 @@ const Restaurant = createGlobalStyle`
               padding-right: 0;
             }
           }
+        }
+      }
+    }
+
+
+
+    @media (max-width: 996px) {
+      .carr-wrapper {
+        .row:nth-child(3) {
+            .col-wrapper {
+                display: block!important;
+            }
+            .col-wrapper:nth-child(5) {
+                display: none!important;
+            }
+        }
+      }
+    }
+
+    @media (min-width: 998px) {
+      .carr-wrapper {
+        .row:nth-child(3) {
+            // .col-wrapper {
+            //     display: block!important;
+            // }
+            .col-wrapper:nth-child(3), .col-wrapper:nth-child(4), .col-wrapper:nth-child(5) {
+                display: block!important;
+            }
         }
       }
     }

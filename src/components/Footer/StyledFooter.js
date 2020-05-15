@@ -22,8 +22,13 @@ const StyledFooter = styled.div`
     padding: 0;
   }
 
+  @media (min-width: ${sizes.mobile}) {
+    .container {
+        max-width: 100%;
+    }
+  }
+
   @media (min-width: ${sizes.tablet}) {
-    //padding: 0 20px;
     padding: 0;
     .container {
         max-width: 100%;
