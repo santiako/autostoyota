@@ -196,6 +196,9 @@ const Restaurant = createGlobalStyle`
 
     // A partir del ancho mobile
     @media (min-width: ${sizes.mobile}) {
+        .imgleft {
+            min-width: 550px;
+        }
         .infocol-texleft {
             margin-bottom: 39px;
             .parr1 {
@@ -329,29 +332,31 @@ const Restaurant = createGlobalStyle`
                   order: inherit;
               }
               .parr-wrapper {
-                padding: 0 75px;
-                margin: 70px auto 0 120px;
-                max-width: 620px;
-                min-width: 480px;
+                padding: 0 0 0 150px;
+                margin: 70px auto;
+                max-width: 552px;
+                min-width: 500px;
               }
               .img-wrapper {
                 max-width: 530px;
-                min-width: 300px;
-                margin: 0 145px 0 auto;
+                min-width: 480px;
+                margin: 0 auto 0 145px;
             }
           }
 
           .infocol-texright {
               .img-wrapper {
                 max-width: 530px;
-                min-width: 300px;
-                margin: 0 auto 0 145px;
+                min-width: 480px;
+                margin: 0 6px 0 auto;
+                padding: 0 0 0 4px;
               }
               .parr-wrapper {
-                padding: 0 75px;
-                margin: 70px 120px 0 auto;
-                max-width: 620px;
-                min-width: 480px;
+                padding: 0 100px 0 60px;
+                //margin: 60px 120px 0 auto;
+                margin: 70px auto;
+                max-width: 552px;
+                min-width: 500px;
               }
           }
       }
