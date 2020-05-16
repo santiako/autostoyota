@@ -32,11 +32,11 @@ const StyledFilters = createGlobalStyle`
   }
 
   .filteradio {
-    display: none;
+    //display: none;
   }
 
   .filteradio {
-    position: absolute;
+    position: inherit;
     top: 0;
     left: 0;
     width: 100%;
@@ -49,6 +49,7 @@ const StyledFilters = createGlobalStyle`
         overflow-y: scroll;
         position: relative;
         margin: -29px 0 0 100px;
+        z-index: 1;
 
         &::-webkit-scrollbar-track {
           border-radius: 10px;
@@ -162,9 +163,7 @@ const StyledFilters = createGlobalStyle`
      float: right;
      position: relative;
      margin: -32px 0 0 0;
-//     &.fleft {
-//        float: left;
-//     }
+     z-index: 2;
 
      button[type=button][aria-expanded=true] {
         border: none;
@@ -224,7 +223,7 @@ const StyledFilters = createGlobalStyle`
       }
   }
 
-    @media (min-width: ${sizes.tablet}) {
+    @media (min-width: 991px) {
         // Si el ancho es > que tablet...
         .fcat {
             display: block;
@@ -233,8 +232,7 @@ const StyledFilters = createGlobalStyle`
             display: none;
         }
     }
-
-    @media (max-width: ${sizes.tablet}) {
+    @media (max-width: 991px) {
         // Si el ancho es < que tablet...
         .filteradio.fcat {
             display: none;

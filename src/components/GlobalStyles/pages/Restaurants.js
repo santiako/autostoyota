@@ -13,16 +13,20 @@ const Restaurants = createGlobalStyle`
 
     .container {
       position: relative;
+      hr {
+        margin-top: 6px;
+        margin-bottom: 35px;
+      }
     }
     H1 {
-        margin: ${sizes.margin * 4}px 0 ${sizes.margin * 6}px 0;
+        margin: ${sizes.margin * 2.4}px 0 ${sizes.margin * 6.4}px 0;
         font-size: 35px;
         font-weight: bold;
         font-stretch: normal;
         font-style: normal;
         line-height: 1.26;
         letter-spacing: -0.7px;
-        color: ${colors.blacknav};
+        color: ${colors.black};
     }
     H4 {
       font-stretch: normal;
@@ -32,7 +36,7 @@ const Restaurants = createGlobalStyle`
     }
     .restaurants-wrapper {
       ul:not(.pagination) {
-        margin-top: ${sizes.margin * 2.6}px;
+        margin-top: ${sizes.margin * 6}px;
         li.column {
           padding-bottom: ${sizes.margin * 2}px;
         }
@@ -57,7 +61,7 @@ const Restaurants = createGlobalStyle`
         color: ${colors.darkBlue};
         ${fonts.bold};
         margin-top: ${sizes.margin * 4.7}px;
-        margin-bottom: ${sizes.margin*0.9}px;
+        margin-bottom: ${sizes.margin * 0.9}px;
       }
       .ooops-text {
         font-size: 16px;
@@ -67,7 +71,16 @@ const Restaurants = createGlobalStyle`
 
     @media (min-width: ${sizes.mobile}) {
       padding: ${sizes.margin * 3.8}px ${sizes.margin * 2}px ${sizes.margin * 4}px ${sizes.margin * 2}px;
-
+      H1 {
+          //margin: ${sizes.margin * 4}px 0 ${sizes.margin * 6}px 0;
+          font-size: 43px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.14;
+          letter-spacing: -1px;
+      }
+      
       ul:not(.pagination) {
         li.column {
           padding-bottom: ${sizes.margin * 4}px;
@@ -77,6 +90,23 @@ const Restaurants = createGlobalStyle`
 
     @media (min-width: ${sizes.tablet}) {
       padding: ${sizes.margin * 3.8}px ${sizes.margin * 2}px ${sizes.margin * 4}px ${sizes.margin * 2}px;
+      H1 {
+          margin: ${sizes.margin * 4.7}px 0 ${sizes.margin * 7.5}px 0;
+          font-size: 50px;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.14;
+          letter-spacing: -1px;
+      }
+      .restaurants-wrapper {
+        ul:not(.pagination) {
+          margin-top: ${sizes.margin * 3}px;
+          li.column {
+            padding-bottom: ${sizes.margin * 2}px;
+          }
+        }
+    }
     }
 
     @media (min-width: ${sizes.desktop}) {

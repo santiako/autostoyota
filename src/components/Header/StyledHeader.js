@@ -44,7 +44,6 @@ const StyledHeader = styled.div`
     }
   }
 
-
   // Animated hamburger icon
   .navbar-toggler {
     position: absolute;
@@ -177,7 +176,7 @@ const StyledHeader = styled.div`
   @media (min-width: ${sizes.mobile}) {
     .navbar {
         .navbar-brand {
-          margin-left: ${sizes.margin * 3.5}px;
+          margin: 14px 0 14px 35px;
         }
         // Desplegable en todos los tamaños
         .navbar-collapse {
@@ -196,9 +195,9 @@ const StyledHeader = styled.div`
                 display: block;
             }
         }
-        .staticnav {
-            display: flex;
-        }
+        // .staticnav {
+        //     display: flex;
+        // }
     }
 
     .navbar-nav {
