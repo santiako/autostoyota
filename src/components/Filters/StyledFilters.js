@@ -202,7 +202,9 @@ const StyledFilters = createGlobalStyle`
         letter-spacing: -0.1px;
         text-align: left;
       }
-
+      &:active {
+        outline: 0;
+      }
       .radio-custom + .radio-custom-label:before {
         position: absolute;
         left: 0;
