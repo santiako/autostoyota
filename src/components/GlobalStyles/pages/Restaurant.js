@@ -22,7 +22,6 @@ const Restaurant = createGlobalStyle`
       }
     }
     .cabecera-row {
-        //margin: '2em auto 4em auto';
         margin: 40px auto 38px auto;
     }
 
@@ -34,7 +33,6 @@ const Restaurant = createGlobalStyle`
         margin: 0;
         padding: 0;
         max-width: 750px;
-        //min-width: 490px;
         .img-wrapper {
             img {
                 -webkit-transform: scaleX(-1);

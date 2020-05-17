@@ -54,6 +54,7 @@ function useWindowSize() {
   return windowSize;
 }
 
+
 // si el filtro es "filtrar por": 
 //    si width > sizes.tablet:
 //        muestra radio buttons,

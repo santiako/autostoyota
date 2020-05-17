@@ -39,7 +39,6 @@ function ItemCarrousel({
   );
 }
 
-
 ItemCarrousel.defaultProps = {
   thumb: null,
   titulo: null,

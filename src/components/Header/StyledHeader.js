@@ -180,6 +180,24 @@ const StyledHeader = styled.div`
         // Desplegable en todos los tamaños
         .navbar-collapse {
             width: 365px;
+            li {
+                a {
+                  padding: 7px 60px 7px 0;
+                  &.bortop {
+                    padding: 27px 60px 7px 0;
+                  }
+                  &.borbot {
+                    padding: 7px 40px 27px 0;
+                    margin: 0 20px 0 32px;
+                  }
+                  &.bot {
+                    padding: 7px 60px 27px 0;
+                  }
+                  &.ulti {
+                    padding: 7px 60px 40px 0;
+                  }
+                }
+            }
         }
         .navbar-toggler {
             margin: 0;
@@ -233,10 +251,10 @@ const StyledHeader = styled.div`
               }
             }
         }
-        }
-        .navbar-toggler {
-          display: block;
-        }
+      }
+      .navbar-toggler {
+        display: block;
+      }
     }
 
     .staticnav {
