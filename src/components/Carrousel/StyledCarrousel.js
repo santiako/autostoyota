@@ -13,14 +13,7 @@ import colors from '../../assets/styles/colors';
 const StyledCarrousel = createGlobalStyle`
     .carr-wrapper {
         padding: 43px 0 49px 0;
-        .col-wrapper {
-            &:first-child,
-            &:last-child {
-                opacity: 0.3;
-            }
-        }
     }
-
     .leftarrow, .rightarrow {
         position: relative;
         width: ${sizes.carrousel.controls.width.large};
@@ -46,9 +39,26 @@ const StyledCarrousel = createGlobalStyle`
 
     .dots-wrapper {
         width: 95px;
-        margin: 0 auto 49px auto;
+        height: 50px;
+        margin: 15px auto;
         Img {
             object-fit: contain;
+        }
+    }
+
+    @media (min-width: ${sizes.mobile}) {
+        .carr-wrapper {
+            .col-wrapper {
+                &:first-child,
+                &:last-child {
+                    opacity: 0.3;
+                }
+            }
+        }
+        .dots-wrapper {
+            width: 95px;
+            height: 50px;
+            margin: 0 auto 0 auto;
         }
     }
 

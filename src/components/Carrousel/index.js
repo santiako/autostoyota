@@ -25,6 +25,7 @@ function Carrousel({ restaurant }) {
   const { item_sliders } = restaurant;
   var itemslideredim = item_sliders;
   const size = useWindowSize();
+  const redim = redimItemSlider();
 
 // Hook
 function useWindowSize() {
@@ -56,36 +57,41 @@ function useWindowSize() {
 }
 
 
-  // Dependiendo el ancho de la ventana va agregando o quitando elementos del Carrousel
-  switch (size.width) {
+function redimItemSlider() {
+    var wwidth = size.width;
+
+    // Dependiendo el ancho de la ventana va agregando o quitando elementos del Carrousel
+    switch (true) {
         // Mobile (item 1)
-        case (size.width > 0 && size.width < 375):
-            itemslideredim = item_sliders.slice(1, 2);
+        case (wwidth > 0 && wwidth < 375):
+            itemslideredim = item_sliders.slice(0, 3);
         break;
 
         // Mobile 2 (items 0, 1, 5)
-        case (size.width > 374 && size.width < 583):
+        case (wwidth > 374 && wwidth < 583):
             itemslideredim = item_sliders.slice(0, 2);
             itemslideredim.push(item_sliders[5]);
         break;
 
         // Tablet 1 (items 0-2, 5)
-        case (size.width > 582 && size.width < 790):
+        case (wwidth > 582 && wwidth < 790):
             itemslideredim = item_sliders.slice(0, 3);
             itemslideredim.push(item_sliders[5]);
         break;
 
         // Tablet 2 (items 0-3, 5)
-        case (size.width > 789 && size.width < 997):
+        case (wwidth > 789 && wwidth < 997):
             itemslideredim = item_sliders.slice(0, 4);
             itemslideredim.push(item_sliders[5]);
         break;
 
         // Desktop (todos los items)
-        case (size.width > 996):
+        case (wwidth > 996):
             itemslideredim = item_sliders;
         break;
-  }
+    }
+}
+
 
     return (
     <>
@@ -98,6 +104,7 @@ function useWindowSize() {
                 <Img src={flechader} />
             </div>
             <Row>
+                {redim}
                 {itemslideredim.map(item => (
                     <ItemCarrousel {...item} key={item.id} />
                 ))}
