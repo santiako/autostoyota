@@ -230,11 +230,9 @@ const Restaurant = createGlobalStyle`
           min-width: 550px;
       }
       .parrleft {
-          //margin: 3em auto 0 0;
           margin: 42px auto 0 auto;
           padding: 0;
           max-width: 480px;
-          //min-width: 300px;
           min-width: 600px;
 
           .parr-wrapper h3 {
@@ -271,35 +269,54 @@ const Restaurant = createGlobalStyle`
           .infocol-texleft {
               margin-bottom: 55px;
               .parr1 {
-                  order: inherit;
+                  order: 2;
               }
               .img1 {
-                  order: inherit;
+                  order: 1;
+                  .img-wrapper {
+                    //margin: 0 auto 0 145px;
+                    margin: auto;
+                    max-width: 530px;
+                    min-width: 550px;
+                  }
               }
               .parr-wrapper {
-                padding: 0 0 0 150px;
-                margin: 70px auto;
-                max-width: 552px;
-                min-width: 500px;
+                margin: 42px auto 0 auto;
+                padding: 0;
+                max-width: 480px;
+                min-width: 600px;
+
+                // Original
+                // padding: 0 0 0 150px;
+                // margin: 70px auto;
+                // max-width: 552px;
+                // min-width: 500px;
               }
-              .img-wrapper {
-                max-width: 530px;
-                min-width: 480px;
-                margin: 0 auto 0 145px;
-            }
           }
           .infocol-texright {
               .img-wrapper {
+                //margin: 0 auto 0 145px;
+                margin: auto;
                 max-width: 530px;
-                min-width: 480px;
-                margin: 0 6px 0 auto;
-                padding: 0 0 0 4px;
+                min-width: 550px;
+                
+
+                // Original
+                // max-width: 530px;
+                // min-width: 480px;
+                // margin: 0 6px 0 auto;
+                // padding: 0 0 0 4px;
               }
               .parr-wrapper {
-                padding: 0 100px 0 60px;
-                margin: 61px auto;
-                max-width: 552px;
-                min-width: 500px;
+                margin: 42px auto 0 auto;
+                padding: 0;
+                max-width: 480px;
+                min-width: 600px;
+
+                // padding: 0 100px 0 60px;
+                // margin: 61px auto;
+                // max-width: 552px;
+                // min-width: 500px;
               }
           }
       }
@@ -347,9 +364,66 @@ const Restaurant = createGlobalStyle`
       }
     }
 
-    // Agregar breakpoint Ficha modelo
+    // Breakpoint 1
     @media (min-width: 950px) {
+      .info-wrapper {
+          .infocol-texleft {
+              .parr-wrapper {
+                padding: 0;
+                margin: 30px auto 0 auto;
+                max-width: 600px;
+                min-width: 500px;
+              }
+          }
+          .infocol-texright {
+              .img-wrapper {
+                margin: auto;
+                max-width: 530px;
+                min-width: 550px;
+              }
+              .parr-wrapper {
+                padding: 0;
+                margin: 30px auto 0 auto;
+                max-width: 600px;
+                min-width: 500px;
+              }
+          }
+      }
+    }
 
+    // Breakpoint 2
+    @media (min-width: 1125px) {
+      .info-wrapper {
+          .infocol-texleft {
+              .parr1 {
+                  order: 1;
+              }
+              .img1 {
+                  order: 2;
+              }
+
+              .parr-wrapper {
+                // Original
+                padding: 0 0 0 150px;
+                margin: 70px auto;
+                max-width: 552px;
+                min-width: 500px;
+              }
+          }
+          .infocol-texright {
+              .img-wrapper {
+                margin: auto;
+                max-width: 530px;
+                min-width: 550px;
+              }
+              .parr-wrapper {
+                padding: 0;
+                margin: 30px auto 0 auto;
+                max-width: 600px;
+                min-width: 500px;
+              }
+          }
+      }
     }
   }
 `;
