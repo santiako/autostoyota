@@ -70,6 +70,14 @@ const StyledCard = styled.div`
             }
         }
     }
+    @media (max-width: 550px) {
+        .img-wrapper {
+            height: 170px;
+            img {
+                object-fit: contain;
+            }
+        }
+    }
     @media (max-width: ${sizes.mobile}) {
         .img-wrapper {
             height: 130px;

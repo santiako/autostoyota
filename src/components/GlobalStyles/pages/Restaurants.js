@@ -80,13 +80,25 @@ const Restaurants = createGlobalStyle`
           line-height: 1.14;
           letter-spacing: -1px;
       }
-      
-      ul:not(.pagination) {
-        li.column {
-          padding-bottom: ${sizes.margin * 4}px;
+      .restaurants-wrapper {
+        ul:not(.pagination) {
+          li.column {
+            padding-bottom: ${sizes.margin * 2}px;
+          }
         }
       }
     }
+
+    @media (min-width: 550px) {
+      .restaurants-wrapper {
+        ul:not(.pagination) {
+          li.column {
+            padding-bottom: ${sizes.margin * 4}px;
+          }
+        }
+      }
+    }
+
 
     @media (min-width: ${sizes.tablet}) {
       padding: ${sizes.margin * 3.8}px ${sizes.margin * 2}px ${sizes.margin * 4}px ${sizes.margin * 2}px;

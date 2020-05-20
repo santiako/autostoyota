@@ -66,7 +66,6 @@ const Restaurant = createGlobalStyle`
             P {
               margin-top: 19px;
               max-width: 400px;
-
               font-weight: normal;
               font-stretch: normal;
               font-style: normal;
@@ -75,7 +74,6 @@ const Restaurant = createGlobalStyle`
             }
         }
     }
-
     .slider-wrapper {
       position: absolute;
       top: 0;
@@ -100,13 +98,11 @@ const Restaurant = createGlobalStyle`
         max-width: 1240px;
       }
     }
-
     .slider-wrapper2 {
         width: 100%;
         height: 452px;
         background-color: ${colors.greySlider};
     }
-
     .info-wrapper {
         margin: 40px 0 79px 0;
         .infocol-texleft, .infocol-texright {
@@ -117,7 +113,6 @@ const Restaurant = createGlobalStyle`
                   font-style: normal;
                   line-height: 1.35;
                   letter-spacing: -0.4px;
-
                   font-size: 20px;
                   line-height: 1.35;
                   letter-spacing: -0.4px;
@@ -160,7 +155,6 @@ const Restaurant = createGlobalStyle`
             }
         }
     }
-
     .informations-wrapper {
       padding: ${sizes.margin * 2.1}px ${sizes.margin * 2}px;
       overflow: hidden;
@@ -221,51 +215,59 @@ const Restaurant = createGlobalStyle`
         }
     }
 
+    @media (min-width: 550px) {
+      .parrleft {
+        margin: 30px auto 0 0;
+      }
+    }
+
     // A partir del ancho tablet
     @media (min-width: ${sizes.tablet}) {
       .cabecera-row {
           margin: 40px auto 80px auto;
       }
       .imgleft {
-          min-width: 550px;
+          min-width: 730px;
       }
       .parrleft {
-          margin: 42px auto 0 auto;
+          margin: 30px auto 0 auto;
           padding: 0;
           max-width: 480px;
           min-width: 600px;
-
-          .parr-wrapper h3 {
-              font-size: 20px;
-              font-weight: 600;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: 1.35;
-              letter-spacing: normal;
+          .parr-wrapper {
+            h3 {
+                font-size: 20px;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.35;
+                letter-spacing: normal;
+            }
+            h1 {
+                font-size: 50px;
+                font-weight: 600;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.14;
+                letter-spacing: -1px;
+                color: #373737;
+            }
+            P {
+                margin-top: 37px;
+                max-width: none;
+                font-family: Montserrat;
+                font-size: 16px;
+                font-weight: normal;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.69;
+                letter-spacing: -0.1px;
+                color: #373737;
+            }
           }
-          .parr-wrapper h1 {
-              font-size: 50px;
-              font-weight: 600;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: 1.14;
-              letter-spacing: -1px;
-              color: #373737;
-          }
-          .parr-wrapper P {
-              max-width: 500px;
-              font-family: Montserrat;
-              font-size: 16px;
-              font-weight: normal;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: 1.69;
-              letter-spacing: -0.1px;
-              color: #373737;
-          }
-          //max-width: none;
       }
       .info-wrapper {
+          margin: 40px 0 117px 0;
           .infocol-texleft {
               margin-bottom: 55px;
               .parr1 {
@@ -274,7 +276,6 @@ const Restaurant = createGlobalStyle`
               .img1 {
                   order: 1;
                   .img-wrapper {
-                    //margin: 0 auto 0 145px;
                     margin: auto;
                     max-width: 530px;
                     min-width: 550px;
@@ -285,38 +286,19 @@ const Restaurant = createGlobalStyle`
                 padding: 0;
                 max-width: 480px;
                 min-width: 600px;
-
-                // Original
-                // padding: 0 0 0 150px;
-                // margin: 70px auto;
-                // max-width: 552px;
-                // min-width: 500px;
               }
           }
           .infocol-texright {
               .img-wrapper {
-                //margin: 0 auto 0 145px;
                 margin: auto;
                 max-width: 530px;
                 min-width: 550px;
-                
-
-                // Original
-                // max-width: 530px;
-                // min-width: 480px;
-                // margin: 0 6px 0 auto;
-                // padding: 0 0 0 4px;
               }
               .parr-wrapper {
                 margin: 42px auto 0 auto;
                 padding: 0;
                 max-width: 480px;
                 min-width: 600px;
-
-                // padding: 0 100px 0 60px;
-                // margin: 61px auto;
-                // max-width: 552px;
-                // min-width: 500px;
               }
           }
       }
@@ -330,17 +312,14 @@ const Restaurant = createGlobalStyle`
         position: relative;
         margin-top: ${sizes.margin * 0.3}px;
       }
-
       .slider-wrapper2 {
           height: 410px;
       }
-
       .informations-wrapper {
         padding: ${sizes.margin * 10}px 0 ${sizes.margin * 0.3}px 0;
         h1 {
           padding: ${sizes.margin * 2}px 0 ${sizes.margin * 2.8}px calc(40% + ${sizes.margin * 3}px);
         }
-
         li.column {
           @media (min-width: ${sizes.desktop}) {
             :nth-child(3n + 1) {
@@ -366,6 +345,9 @@ const Restaurant = createGlobalStyle`
 
     // Breakpoint 1
     @media (min-width: 950px) {
+      .imgleft {
+          min-width: 730px;
+      }
       .info-wrapper {
           .infocol-texleft {
               .parr-wrapper {
@@ -393,6 +375,16 @@ const Restaurant = createGlobalStyle`
 
     // Breakpoint 2
     @media (min-width: 1125px) {
+      .imgleft {
+          min-width: 750px;
+          margin: 0 auto 0 auto;
+      }
+      .parrleft {
+          margin: 30px auto 0 auto;
+          padding: 0;
+          max-width: 570px;
+          min-width: 530px;
+      }
       .info-wrapper {
           .infocol-texleft {
               .parr1 {
@@ -400,8 +392,12 @@ const Restaurant = createGlobalStyle`
               }
               .img1 {
                   order: 2;
+                  .img-wrapper {
+                    margin: 0 auto 0 -9px;
+                    max-width: 550px;
+                    min-width: 470px;
+                  }
               }
-
               .parr-wrapper {
                 // Original
                 padding: 0 0 0 150px;
@@ -412,17 +408,49 @@ const Restaurant = createGlobalStyle`
           }
           .infocol-texright {
               .img-wrapper {
-                margin: auto;
                 max-width: 530px;
-                min-width: 550px;
+                min-width: 500px;
+                margin: 0 auto 0 145px;
               }
               .parr-wrapper {
-                padding: 0;
-                margin: 30px auto 0 auto;
-                max-width: 600px;
-                min-width: 500px;
+                padding: 0 50px;
+                margin: 50px auto 0 auto;
+                max-width: 500px;
+                min-width: 300px;
               }
           }
+      }
+    }
+
+    // Breakpoint 3 (entre 1221 y 1375px)
+    @media (min-width: 1220px) {
+      .imgleft {
+          min-width: 620px;
+      }
+    }
+    
+    // Breakpoint 4
+    @media (min-width: 1235px) {
+      .parrleft {
+        .parr-wrapper {
+          P {
+            max-width: 400px;
+          }
+        }
+      }
+    }
+
+    // Breakpoint 5
+    @media (min-width: 1375px) {
+      .imgleft {
+          min-width: 710px;
+          margin: 0 auto 0 60px;
+      }
+      .parrleft {
+          margin: 30px auto 0 auto;
+          padding: 0 50px 0 0;
+          max-width: 550px;
+          min-width: 400px;
       }
     }
   }
