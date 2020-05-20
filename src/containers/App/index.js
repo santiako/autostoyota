@@ -11,10 +11,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import GlobalStyles from '../../components/GlobalStyles';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-//import Menu from '../../components/Menu';
 
-import About from '../About';
-import Blog from '../Blog';
 import RestaurantsPage from '../RestaurantsPage';
 import RestaurantPage from '../RestaurantPage';
 import NotFound from '../NotFound';
