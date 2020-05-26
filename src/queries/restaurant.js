@@ -1,16 +1,22 @@
 /* eslint-disable import/prefer-default-export */
 import gql from 'graphql-tag';
 
+
+// , $reviewsFilter: JSON
+    // reviewsConnection(where: $reviewsFilter) {
+    //   aggregate {
+    //     count
+    //   }
+    // }
+
 const GET_RESTAURANT = gql`
-  query restaurant($id: ID!, $reviewsFilter: JSON) {
+  query restaurant($id: ID!) {
     restaurant(id: $id) {
       id
-      address
       category {
         name
       }
       description
-      price
       anio
       precio
       modeloext
@@ -22,35 +28,10 @@ const GET_RESTAURANT = gql`
       autoabajo2 {
         url
       }
-      district
       cover {
         url
       }
       name
-      note
-      opening_hours {
-        id
-        day_interval
-        opening_hour
-        closing_hour
-      }
-      phone
-      noteDetails {
-        note
-        count
-      }
-      reviews {
-        id
-        note
-        content
-        created_at
-        author {
-          username
-          picture {
-            url
-          }
-        }
-      }
       item_sliders {
         thumb {
           url
@@ -58,13 +39,8 @@ const GET_RESTAURANT = gql`
         titulo
         descripcion
       }
-      website
     }
-    reviewsConnection(where: $reviewsFilter) {
-      aggregate {
-        count
-      }
-    }
+
   }
 `;
 

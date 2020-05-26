@@ -14,13 +14,8 @@ const restaurantDefaultShape = {
   autoabajo: null,
   autoabajo2: null,
   description: null,
-  district: '_1st',
   id: null,
   name: null,
-  note: null,
-  opening_hours: null,
-  price: null,
-  reviews: [reviewDefaultShape],
   __typename: 'Restaurant'
 };
 
@@ -40,19 +35,8 @@ const restaurantShape = {
   autoabajo: PropTypes.shape({ url: PropTypes.string, __typename: PropTypes.string }),
   autoabajo2: PropTypes.shape({ url: PropTypes.string, __typename: PropTypes.string }),
   description: PropTypes.string,
-  district: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,
-  note: PropTypes.number,
-  opening_hours: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.arrayOf(PropTypes.shape({
-      subtitle: PropTypes.string,
-      text: PropTypes.string,
-    })),
-  ]),
-  price: PropTypes.string,
-  reviews: PropTypes.arrayOf(PropTypes.shape(reviewShape)),
   __typename: PropTypes.string
 };
 

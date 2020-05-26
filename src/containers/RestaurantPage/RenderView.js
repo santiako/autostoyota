@@ -12,26 +12,27 @@ import H3 from '../../components/H3';
 import Img from '../../components/Img';
 import Carrousel from '../../components/Carrousel';
 
+  // rest: {
+  //   reviewsConnection: {
+  //     aggregate: { count },
+  //   },
+  // },
+
 const RenderView = ({
   restaurant,
-  rest: {
-    reviewsConnection: {
-      aggregate: { count },
-    },
-  },
   history,
   match: {
     params: { content, id },
   },
 }) => {
   const { cover, modeloext, titulo, description, titulo20px, autoabajo, autoabajo2 } = restaurant;
-  const tabs = ['informations', 'reviews'];
+  // const tabs = ['informations', 'reviews'];
 
-  const toggle = tab => {
-    if (content !== tab) {
-      history.push(`/${id}/${tab}`);
-    }
-  };
+  // const toggle = tab => {
+  //   if (content !== tab) {
+  //     history.push(`/${id}/${tab}`);
+  //   }
+  // };
 
   return (
     <div>

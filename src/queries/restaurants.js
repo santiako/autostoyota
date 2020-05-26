@@ -6,7 +6,6 @@ const GET_RESTAURANTS = gql`
     restaurants(limit: $limit, start: $start, sort: $sort, where: $where) {
       id
       description
-      district
       cover {
         url
       }
@@ -14,8 +13,6 @@ const GET_RESTAURANTS = gql`
         name
       }
       name
-      note
-      price
       anio
       precio
       modeloext
@@ -26,10 +23,6 @@ const GET_RESTAURANTS = gql`
       }
       autoabajo2 {
         url
-      }
-      reviews {
-        note
-        content
       }
     }
     restaurantsConnection(where: $where) {
