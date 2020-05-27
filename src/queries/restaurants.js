@@ -6,6 +6,8 @@ const GET_RESTAURANTS = gql`
     restaurants(limit: $limit, start: $start, sort: $sort, where: $where) {
       id
       description
+      description2
+      description3
       cover {
         url
       }
@@ -18,6 +20,7 @@ const GET_RESTAURANTS = gql`
       modeloext
       titulo
       titulo20px
+      titulo20px2
       autoabajo {
         url
       }

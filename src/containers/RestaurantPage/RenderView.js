@@ -12,11 +12,6 @@ import H3 from '../../components/H3';
 import Img from '../../components/Img';
 import Carrousel from '../../components/Carrousel';
 
-  // rest: {
-  //   reviewsConnection: {
-  //     aggregate: { count },
-  //   },
-  // },
 
 const RenderView = ({
   restaurant,
@@ -25,14 +20,8 @@ const RenderView = ({
     params: { content, id },
   },
 }) => {
-  const { cover, modeloext, titulo, description, titulo20px, autoabajo, autoabajo2 } = restaurant;
-  // const tabs = ['informations', 'reviews'];
-
-  // const toggle = tab => {
-  //   if (content !== tab) {
-  //     history.push(`/${id}/${tab}`);
-  //   }
-  // };
+  const { cover, modeloext, titulo, description, description2, description3, 
+    titulo20px, titulo20px2, autoabajo, autoabajo2 } = restaurant;
 
   return (
     <div>
@@ -67,7 +56,7 @@ const RenderView = ({
                     <Col className="parr1">
                         <div className="parr-wrapper">
                             <H3>{ titulo20px }</H3>
-                            <P>{ description }</P>
+                            <P>{ description2 }</P>
                         </div>
                     </Col>
                     <Col className="img1">
@@ -91,8 +80,8 @@ const RenderView = ({
                     </Col>
                     <Col className="parr2">
                         <div className="parr-wrapper">
-                          <H3>{ titulo20px }</H3>
-                          <P>{ description }</P>
+                          <H3>{ titulo20px2 }</H3>
+                          <P>{ description3 }</P>
                         </div>
                     </Col>
                 </Row>

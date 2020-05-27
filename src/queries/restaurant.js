@@ -1,14 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import gql from 'graphql-tag';
 
-
-// , $reviewsFilter: JSON
-    // reviewsConnection(where: $reviewsFilter) {
-    //   aggregate {
-    //     count
-    //   }
-    // }
-
 const GET_RESTAURANT = gql`
   query restaurant($id: ID!) {
     restaurant(id: $id) {
@@ -17,11 +9,14 @@ const GET_RESTAURANT = gql`
         name
       }
       description
+      description2
+      description3
       anio
       precio
       modeloext
       titulo
       titulo20px
+      titulo20px2
       autoabajo {
         url
       }
