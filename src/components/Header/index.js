@@ -17,9 +17,7 @@ function Header({ links }) {
   const [isOpen, toggleIsOpen] = useState(false);
 
   const toggleCollapse = () => {
-    //if (window.innerWidth < 768) {
       toggleIsOpen(!isOpen);
-    //}
   };
   var pathname = window.location.pathname;
 
@@ -27,6 +25,7 @@ function Header({ links }) {
 
   return (
     <StyledHeader>
+      <div className={"backdrop " + ((isOpen) ? "bvisible" : "")}></div>
       <Navbar>
         <div className="container">
           <div className="navbar-brand">
