@@ -70,6 +70,7 @@ const StyledHeader = styled.div`
     right: 4px;
     padding: 11px;
     border: 0;
+    z-index: 2;
 
     p.nav-cerrar {
         display: none;
