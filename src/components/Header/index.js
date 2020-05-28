@@ -55,6 +55,10 @@ function Header({ links }) {
           </NavItem>
         </Nav>
 
+        </div>
+      </Navbar>
+
+      <Navbar>
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar>
             {links.map(link => {
@@ -81,7 +85,6 @@ function Header({ links }) {
           </div>
           <p className="nav-cerrar">Menú</p>
         </NavbarToggler>
-        </div>
       </Navbar>
     </StyledHeader>
   );
