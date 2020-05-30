@@ -28,7 +28,7 @@ const StyledHeader = styled.div`
   //     opacity: 1;
   //     pointer-events: all;
   //   }
-  // }
+  // }f
   .navbar {
     position: relative;
     height: ${sizes.header.height.large};
