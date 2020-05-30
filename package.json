@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "private": false,
-  "homepage": "https://santiako.github.io/",
+  "homepage": "https://santiako.github.io/santiako.github.io",
   "dependencies": {
     "apollo-boost": "^0.1.28",
     "bootstrap": "^4.3.1",
