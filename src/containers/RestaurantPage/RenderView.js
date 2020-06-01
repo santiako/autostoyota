@@ -12,7 +12,6 @@ import H3 from '../../components/H3';
 import Img from '../../components/Img';
 import Carrousel from '../../components/Carrousel';
 
-
 const RenderView = ({
   restaurant,
   history,
@@ -20,74 +19,78 @@ const RenderView = ({
     params: { content, id },
   },
 }) => {
-  const { cover, modeloext, titulo, description, description2, description3, 
-    titulo20px, titulo20px2, autoabajo, autoabajo2 } = restaurant;
+  const {
+    cover,
+    modeloext,
+    titulo,
+    description,
+    description2,
+    description3,
+    titulo20px,
+    titulo20px2,
+    autoabajo,
+    autoabajo2,
+  } = restaurant;
 
   return (
     <div>
-    <Container fluid={true} className="overflow-hidden">
+      <Container fluid={true} className="overflow-hidden">
         <Row className="cabecera-row">
-            <Col md="6" className='imgleft'>
-                <div className="img-wrapper">
-                    <Img
-                        src={`${process.env.REACT_APP_BACKEND_URL}${cover[0].url}`}
-                      />
-                </div>
-            </Col>
+          <Col md="6" className="imgleft">
+            <div className="img-wrapper">
+              <Img src={`${cover[0].url}`} />
+            </div>
+          </Col>
 
-            <Col md="6" className='parrleft'>
-                <div className="parr-wrapper">
-                    <H3>{ modeloext }</H3>
-                    <H1>{ titulo }</H1>
-                    <P>{ description }</P>
-                </div>
-            </Col>
+          <Col md="6" className="parrleft">
+            <div className="parr-wrapper">
+              <H3>{modeloext}</H3>
+              <H1>{titulo}</H1>
+              <P>{description}</P>
+            </div>
+          </Col>
         </Row>
 
         <Row className="slider-row">
           <div className="slider-wrapper2">
-                <Carrousel restaurant={{ ...restaurant }} />
+            <Carrousel restaurant={{ ...restaurant }} />
           </div>
         </Row>
 
         <div className="info-wrapper">
-            <div className="infocol-texleft">
-                <Row>
-                    <Col className="parr1">
-                        <div className="parr-wrapper">
-                            <H3>{ titulo20px }</H3>
-                            <P>{ description2 }</P>
-                        </div>
-                    </Col>
-                    <Col className="img1">
-                        <div className="img-wrapper">
-                            <Img
-                            src={`${process.env.REACT_APP_BACKEND_URL}${autoabajo.url}`}
-                            />
-                        </div>
-                    </Col>
-                </Row>
-            </div>
+          <div className="infocol-texleft">
+            <Row>
+              <Col className="parr1">
+                <div className="parr-wrapper">
+                  <H3>{titulo20px}</H3>
+                  <P>{description2}</P>
+                </div>
+              </Col>
+              <Col className="img1">
+                <div className="img-wrapper">
+                  <Img src={`${autoabajo.url}`} />
+                </div>
+              </Col>
+            </Row>
+          </div>
 
-            <div className="infocol-texright">
-                <Row>
-                    <Col className="img2">
-                        <div className="img-wrapper">
-                        <Img
-                            src={`${process.env.REACT_APP_BACKEND_URL}${autoabajo2.url}`}
-                           />
-                        </div>
-                    </Col>
-                    <Col className="parr2">
-                        <div className="parr-wrapper">
-                          <H3>{ titulo20px2 }</H3>
-                          <P>{ description3 }</P>
-                        </div>
-                    </Col>
-                </Row>
-            </div>
+          <div className="infocol-texright">
+            <Row>
+              <Col className="img2">
+                <div className="img-wrapper">
+                  <Img src={`${autoabajo2.url}`} />
+                </div>
+              </Col>
+              <Col className="parr2">
+                <div className="parr-wrapper">
+                  <H3>{titulo20px2}</H3>
+                  <P>{description3}</P>
+                </div>
+              </Col>
+            </Row>
+          </div>
         </div>
-    </Container>
+      </Container>
     </div>
   );
 };
