@@ -138,7 +138,6 @@ const Restaurant = createGlobalStyle`
                     margin: 0;
                     max-width: 560px;
                     min-width: 250px;
-                    //margin: 0 145px 0 auto;
                 }
             }
         }
@@ -180,6 +179,9 @@ const Restaurant = createGlobalStyle`
         }
         .infocol-texleft {
             margin-bottom: 39px;
+            .parr1, .img1 {
+                min-width: 100%;
+            }
             .parr1 {
                 .parr-wrapper {
                     min-width: 250px;
@@ -187,6 +189,9 @@ const Restaurant = createGlobalStyle`
             }
         }
         .infocol-texright {
+            .img2, .parr2 {
+                min-width: 100%;
+            }
             .parr2 {
                 .parr-wrapper {
                     min-width: 250px;
