@@ -17,35 +17,6 @@ import FiltersGroup from '../FiltersGroup';
 function Filters({ filters, onChange }) {
   const [isOpen, toggleIsOpen] = useState(false);
 
-//      <StyledFilters />
-//      <Collapse className="filters-collapse" isOpen={isOpen} navbar>
-//        <hr />
-//        <div className="filters-wrapper">
-//          {filters.map(filter => {
-//            return (
-//              <FiltersGroup
-//                {...filter}
-//                key={filter.name}
-//                onChange={e => {
-//                  if (window.innerWidth < 768) {
-//                    toggleIsOpen(!isOpen);
-//                  }
-//                  onChange(e);
-//                }}
-//              />
-//            );
-//          })}
-//        </div>
-//      <hr />
-//      </Collapse>
-//      <NavbarToggler onClick={() => toggleIsOpen(!isOpen)}>
-//        <div className="filter-btn">
-//          <img src={Icon} alt="filter" />
-//          <span>Filtros</span>
-//        </div>
-//      </NavbarToggler>
-
-
   return (
     <>
       <StyledFilters />
