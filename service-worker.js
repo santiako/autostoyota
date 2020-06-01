@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/autostoyota/precache-manifest.41f9e1b1f44de6b8ad99da6a2cf34036.js"
+  "/autostoyota/precache-manifest.2e084250ecee950245d3ad67db86f197.js"
 );
 
 workbox.clientsClaim();
