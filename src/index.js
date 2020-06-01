@@ -7,7 +7,7 @@ import client from './apolloClient';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <ApolloProvider client={client}>
       <App />
     </ApolloProvider>
