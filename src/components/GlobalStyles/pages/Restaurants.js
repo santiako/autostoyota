@@ -5,7 +5,6 @@ import colors from '../../../assets/styles/colors';
 import fonts from '../../../assets/styles/fonts';
 
 const Restaurants = createGlobalStyle`
-
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap');
 
   #restaurants-page {
@@ -72,7 +71,6 @@ const Restaurants = createGlobalStyle`
     @media (min-width: ${sizes.mobile}) {
       padding: ${sizes.margin * 3.8}px ${sizes.margin * 2}px ${sizes.margin * 4}px ${sizes.margin * 2}px;
       H1 {
-          //margin: ${sizes.margin * 4}px 0 ${sizes.margin * 6}px 0;
           font-size: 43px;
           font-weight: bold;
           font-stretch: normal;
@@ -116,6 +114,11 @@ const Restaurants = createGlobalStyle`
           margin-top: ${sizes.margin * 3}px;
           li.column {
             padding-bottom: ${sizes.margin * 2}px;
+            .img-wrapper {
+              img {
+                object-fit: contain;
+              }
+            }
           }
         }
     }
