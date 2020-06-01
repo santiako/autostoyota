@@ -21,7 +21,6 @@ const Restaurant = createGlobalStyle`
     .cabecera-row {
         margin: 40px auto 38px auto;
     }
-
     .slider-row {
         margin-right: -328px;
         margin-left: -328px;
@@ -122,36 +121,42 @@ const Restaurant = createGlobalStyle`
                 }
             }
         }
-
         .infocol-texleft {
             margin-bottom: 39px;
+            .parr1, .img1 {
+                min-width: 100%;
+            }
             .parr1 {
                 order: 2;
+                .parr-wrapper {
+                    max-width: 620px;
+                }
             }
             .img1 {
                 order: 1;
                 .img-wrapper {
                     margin: 0;
+                    max-width: 560px;
+                    min-width: 250px;
+                    //margin: 0 145px 0 auto;
                 }
             }
-            .parr-wrapper {
-                max-width: 620px;
-            }
-            .img-wrapper {
-                max-width: 530px;
-                min-width: 250px;
-                margin: 0 145px 0 auto;
-            }
         }
-
         .infocol-texright {
-            .img-wrapper {
-                max-width: 530px;
-                min-width: 250px;
-                margin: 0;
+            .img2, .parr2 {
+                min-width: 100%;
             }
-            .parr-wrapper {
-                max-width: 620px;
+            .img2 {
+                .img-wrapper {
+                    max-width: 560px;
+                    min-width: 250px;
+                    margin: 0;
+                }
+            }
+            .parr2 {
+                .parr-wrapper {
+                    max-width: 620px;
+                }
             }
         }
     }
@@ -272,6 +277,12 @@ const Restaurant = createGlobalStyle`
               margin-bottom: 55px;
               .parr1 {
                   order: 2;
+                  .parr-wrapper {
+                    margin: 42px auto 0 auto;
+                    padding: 0;
+                    max-width: 480px;
+                    min-width: 600px;
+                  }
               }
               .img1 {
                   order: 1;
@@ -281,24 +292,23 @@ const Restaurant = createGlobalStyle`
                     min-width: 550px;
                   }
               }
-              .parr-wrapper {
-                margin: 42px auto 0 auto;
-                padding: 0;
-                max-width: 480px;
-                min-width: 600px;
-              }
+
           }
           .infocol-texright {
-              .img-wrapper {
-                margin: auto;
-                max-width: 530px;
-                min-width: 550px;
+              .img2 {
+                  .img-wrapper {
+                    margin: auto;
+                    max-width: 530px;
+                    min-width: 550px;
+                  }
               }
-              .parr-wrapper {
-                margin: 42px auto 0 auto;
-                padding: 0;
-                max-width: 480px;
-                min-width: 600px;
+              .parr2 {
+                  .parr-wrapper {
+                    margin: 42px auto 0 auto;
+                    padding: 0;
+                    max-width: 480px;
+                    min-width: 600px;
+                  }
               }
           }
       }
@@ -389,34 +399,42 @@ const Restaurant = createGlobalStyle`
           .infocol-texleft {
               .parr1 {
                   order: 1;
+                  min-width: 0;
+                  .parr-wrapper {
+                    // Original
+                    padding: 0 0 0 150px;
+                    margin: 70px auto;
+                    max-width: 552px;
+                    min-width: 500px;
+                  }
               }
               .img1 {
                   order: 2;
+                  min-width: 0;
                   .img-wrapper {
                     margin: 0 auto 0 -9px;
                     max-width: 550px;
                     min-width: 470px;
                   }
               }
-              .parr-wrapper {
-                // Original
-                padding: 0 0 0 150px;
-                margin: 70px auto;
-                max-width: 552px;
-                min-width: 500px;
-              }
           }
           .infocol-texright {
-              .img-wrapper {
-                max-width: 530px;
-                min-width: 500px;
-                margin: 0 auto 0 145px;
+              .img2 {
+                  min-width: 0;
+                  .img-wrapper {
+                    max-width: 530px;
+                    min-width: 500px;
+                    margin: 0 auto 0 145px;
+                  }
               }
-              .parr-wrapper {
-                padding: 0 50px;
-                margin: 50px auto 0 auto;
-                max-width: 500px;
-                min-width: 300px;
+              .parr2 {
+                  min-width: 0;
+                  .parr-wrapper {
+                    padding: 0 50px;
+                    margin: 50px auto 0 auto;
+                    max-width: 500px;
+                    min-width: 300px;
+                  }
               }
           }
       }
