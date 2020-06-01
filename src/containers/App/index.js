@@ -17,8 +17,8 @@ import RestaurantPage from '../RestaurantPage';
 import NotFound from '../NotFound';
 
 const headerUrls = [
-  { name: 'Modelos', to: `${process.env.PUBLIC_URL}` },
-  { name: 'Ficha de modelo', to: `${process.env.PUBLIC_URL}/5/informations` },
+  { name: 'Modelos', to: '/' },
+  { name: 'Ficha de modelo', to: '/5/informations' },
   { name: 'Servicios y accesorios', to: '' },
   { name: 'Financiación', to: '' },
   { name: 'Reviews y Comunidad', to: '', clase: 'borbot' },
@@ -44,7 +44,6 @@ function App() {
   return (
     <div>
       <GlobalStyles />
-
       <Header links={headerUrls} />
       <Switch>
         <Route path="/" component={RestaurantsPage} exact />
