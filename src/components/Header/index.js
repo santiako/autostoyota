@@ -25,6 +25,7 @@ function Header({ links }) {
 
   return (
     <StyledHeader>
+      <div className={"backdrop " + ((isOpen) ? "bvisible" : "")}></div>
       <Navbar>
         <div className="container">
           <div className="navbar-brand">
