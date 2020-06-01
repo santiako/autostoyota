@@ -11,24 +11,24 @@ import sizes from '../../assets/styles/sizes';
 import fonts from '../../assets/styles/fonts';
 
 const StyledHeader = styled.div`
-  .backdrop {
-    pointer-events: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    background-color: rgba(55,55,55,.95);
-    visibility: hidden;
-    opacity: 0;
-    transition: all .4s ease-in-out;
-    &.bvisible {
-      visibility: visible;
-      opacity: 1;
-      pointer-events: all;
-    }
-  }
+  // .backdrop {
+  //   pointer-events: none;
+  //   position: fixed;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   z-index: 2;
+  //   background-color: rgba(55,55,55,.95);
+  //   visibility: hidden;
+  //   opacity: 0;
+  //   transition: all .4s ease-in-out;
+  //   &.bvisible {
+  //     visibility: visible;
+  //     opacity: 1;
+  //     pointer-events: all;
+  //   }
+  // }f
   .navbar {
     position: relative;
     height: ${sizes.header.height.large};
