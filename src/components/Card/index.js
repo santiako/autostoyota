@@ -25,7 +25,7 @@ function Card({ restaurant, onClick }) {
       <CardSection restaurant={restaurant} />
       <div className="img-wrapper">
         <Img
-          src={`${process.env.REACT_APP_BACKEND_URL}${coverURL}`}
+          src={`${coverURL}`}
           alt="cover"
         />
       </div>

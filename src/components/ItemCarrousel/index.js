@@ -29,7 +29,7 @@ function ItemCarrousel({
         <Col className="col-wrapper">
             <div className="img-wrapper">
                 <Img
-                    src={`${process.env.REACT_APP_BACKEND_URL}${url}`}
+                    src={`${url}`}
                 />
             </div>
             <H3>{ titulo }</H3>
