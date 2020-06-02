@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/autostoyota/static/media/logo.84fb968e.svg"
   },
   {
-    "revision": "1d6c30b7173c81fc10c9",
-    "url": "/autostoyota/static/js/main.33e8672d.chunk.js"
+    "revision": "b813b111e4c1b3d457b0",
+    "url": "/autostoyota/static/js/main.b97729cb.chunk.js"
   },
   {
     "revision": "5290ee2ffdddc9298dfa58f6a21826a8",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/autostoyota/static/css/2.275d0061.chunk.css"
   },
   {
-    "revision": "a98af24d692bc272aef03cce3a28d0c8",
+    "revision": "d8ecb1892881491c435ea0df15a1148b",
     "url": "/autostoyota/index.html"
   }
 ];
