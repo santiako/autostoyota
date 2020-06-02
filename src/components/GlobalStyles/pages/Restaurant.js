@@ -205,10 +205,8 @@ const Restaurant = createGlobalStyle`
             max-width: none;
         }
         .slider-row {
-            // margin-right: -190px;
-            // margin-left: -190px;
-            margin-right: -15px;
-            margin-left: -15px;
+            margin-right: -190px;
+            margin-left: -190px;
         }
         .carr-wrapper {
           .col-wrapper {
