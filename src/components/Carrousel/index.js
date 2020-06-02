@@ -92,8 +92,7 @@ function redimItemSlider() {
     }
 }
 
-
-    return (
+  return (
     <>
     <StyledCarrousel />
         <div className="carr-wrapper">
@@ -116,7 +115,7 @@ function redimItemSlider() {
             </Row>
         </div>
     </>
-    );
+  );
 }
 
 Carrousel.defaultProps = {
