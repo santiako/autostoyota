@@ -25,7 +25,8 @@ const StyledCarrousel = createGlobalStyle`
         }
         .leftarrow {
             float: left;
-            left: 175px;
+            //left: 175px;
+            left: 0;
             img {
               -ms-transform: rotate(180deg);
               transform: rotate(180deg);
@@ -33,7 +34,8 @@ const StyledCarrousel = createGlobalStyle`
         }
         .rightarrow {
             float: right;
-            right: 175px;
+            //right: 175px;
+            right: 0;
         }
         .dots-wrapper {
             width: 95px;
