@@ -61,7 +61,8 @@ const StyledCarrousel = createGlobalStyle`
         }
     }
 
-    @media (max-width: ${sizes.mobile}) {
+    // Hasta ancho tablet
+    @media (max-width: ${sizes.tablet}) {
         .leftarrow, .rightarrow {
             display: none;
         }
