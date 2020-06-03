@@ -5,6 +5,7 @@ import colors from '../../../assets/styles/colors';
 
 const Restaurant = createGlobalStyle`
   #restaurant-page {
+    margin: ${sizes.header.height.large} 0 0 0;
     .intro-wrapper {
       z-index: 1;
       width: 100%;
@@ -49,7 +50,6 @@ const Restaurant = createGlobalStyle`
               line-height: 1.26;
               letter-spacing: -0.7px;
               color: #191919;
-
               margin-top: 11px;
               font-stretch: normal;
               font-style: normal;

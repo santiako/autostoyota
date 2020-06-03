@@ -5,12 +5,14 @@
  */
 
 import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 import colors from '../../assets/styles/colors';
 import sizes from '../../assets/styles/sizes';
 import fonts from '../../assets/styles/fonts';
 
-const StyledHeader = styled.div`
+//const StyledHeader = styled.div`
+const StyledHeader = createGlobalStyle`
   // .backdrop {
   //   pointer-events: none;
   //   position: fixed;
@@ -29,13 +31,13 @@ const StyledHeader = styled.div`
   //     pointer-events: all;
   //   }
   // }f
+
   .navbar {
-    position: relative;
+    //position: relative;
     height: ${sizes.header.height.large};
     padding: 0 ${sizes.header.padding};
     background-color: white;
     border-bottom: 1px solid ${colors.greyBorBot};
-
     .container {
         justify-content: flex-start;
     }
@@ -88,7 +90,6 @@ const StyledHeader = styled.div`
     .nav-icon {
       position: relative;
       width: 20px;
-      //height: 13px;
       transform: rotate(0deg);
       transition: 0.15s ease-in-out;
       cursor: pointer;
@@ -145,7 +146,6 @@ const StyledHeader = styled.div`
         &.ulti {
             padding: 7px 45px 40px 0;
         }
-
         ${fonts.reg};
         font-size: 20px;
         font-weight: normal;
@@ -153,7 +153,6 @@ const StyledHeader = styled.div`
         letter-spacing: -0.1px;
         text-align: right;
         color: black;
-
         &.active,
         &:hover {
           span {
@@ -245,7 +244,6 @@ const StyledHeader = styled.div`
             flex-direction: row;
         }
     }
-
     .navbar {
       .navbar-collapse {
         .navbar-nav {
@@ -274,7 +272,6 @@ const StyledHeader = styled.div`
         display: block;
       }
     }
-
     .staticnav {
       position: relative;
       top: inherit;
@@ -320,7 +317,6 @@ const StyledHeader = styled.div`
             width: 100%;
             border: 2px solid transparent;
           }
-
           &.active,
           &:hover {
             span {
@@ -337,7 +333,6 @@ const StyledHeader = styled.div`
         }
       }
     }
-
     .navbar-collapse.show + button {
       .nav-cerrar {
           display: block;

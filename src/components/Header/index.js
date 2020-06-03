@@ -21,11 +21,10 @@ function Header({ links }) {
   };
   var pathname = window.location.pathname;
 
-// <Navbar expand="xl">
-
   return (
-    <StyledHeader>
-      <Navbar>
+    <>
+    <StyledHeader />
+      <Navbar fixed="top">
         <div className="container">
           <div className="navbar-brand">
             <Link url="/">
@@ -82,7 +81,7 @@ function Header({ links }) {
         </NavbarToggler>
         </div>
       </Navbar>
-    </StyledHeader>
+      </>
   );
 }
 

@@ -8,6 +8,7 @@ const Restaurants = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700&display=swap');
 
   #restaurants-page {
+    margin: ${sizes.header.height.large} 0 0 0;
     padding: ${sizes.margin * 1.9}px ${sizes.margin * 1.5}px;
 
     .container {
