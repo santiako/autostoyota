@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/autostoyota/static/media/logo.84fb968e.svg"
   },
   {
-    "revision": "3b0411d77af35ba9ed0c",
-    "url": "/autostoyota/static/js/main.e6d5b8e7.chunk.js"
+    "revision": "b86f86eda9c9734a940e",
+    "url": "/autostoyota/static/js/main.e2c80859.chunk.js"
   },
   {
     "revision": "5290ee2ffdddc9298dfa58f6a21826a8",
@@ -32,15 +32,15 @@ self.__precacheManifest = [
     "url": "/autostoyota/static/media/icon_star_inactive.362e8396.svg"
   },
   {
-    "revision": "da85e54998493987e94b",
-    "url": "/autostoyota/static/js/2.26b20bd5.chunk.js"
+    "revision": "0ca7cf9b44bb77c02db4",
+    "url": "/autostoyota/static/js/2.7e8a32b7.chunk.js"
   },
   {
-    "revision": "da85e54998493987e94b",
+    "revision": "0ca7cf9b44bb77c02db4",
     "url": "/autostoyota/static/css/2.275d0061.chunk.css"
   },
   {
-    "revision": "997e8f67c8fafd6db56072e0d7c2b048",
+    "revision": "764bffdc3fe0b3b6a79e5287a9c2b14e",
     "url": "/autostoyota/index.html"
   }
 ];
