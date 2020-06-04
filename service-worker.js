@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/autostoyota/precache-manifest.dc3bd95e64b277060ef9235b90d92210.js"
+  "/modelosdeautos/precache-manifest.5059ac5e3b3c5adafcf3a92ccd2f0885.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/autostoyota/index.html", {
+workbox.routing.registerNavigationRoute("/modelosdeautos/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
