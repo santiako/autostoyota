@@ -1,9 +1,9 @@
 {
-  "name": "Prueba-Desarrollo",
-  "version": "0.1.0",
+  "name": "Modelos-de-autos",
+  "version": "1.0.0",
   "license": "MIT",
   "private": false,
-  "homepage": "https://santiako.github.io/autostoyota",
+  "homepage": "https://santiako.github.io/modelosdeautos",
   "dependencies": {
     "apollo-boost": "^0.1.28",
     "bootstrap": "^4.3.1",
