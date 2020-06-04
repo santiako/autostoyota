@@ -62,61 +62,66 @@ const StyledHeader = createGlobalStyle`
     .staticnav {
         display: none;
     }
-  }
 
-  // Animated hamburger icon
-  .navbar-toggler {
-    position: absolute;
-    margin: 0;
-    top: 17px;
-    right: 4px;
-    padding: 11px;
-    border: 0;
-
-    p.nav-cerrar {
-        display: none;
-        position: relative;
-        top: -2px;
-        right: 46px;
-        font-family: ${fonts.reg};
-        font-size: 14px;
-        font-weight: normal;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        color: ${colors.blacknav};
-    }
-    .nav-icon {
-      position: relative;
-      width: 20px;
-      transform: rotate(0deg);
-      transition: 0.15s ease-in-out;
-      cursor: pointer;
-    }
-    .nav-icon span {
+    // Animated hamburger icon
+    .navbar-toggler {
       position: absolute;
-      right: 0;
-      display: block;
-      width: 100%;
-      height: 2px;
-      background: ${colors.blacknav};
-      border-radius: 100px;
-      opacity: 1;
-      transform: rotate(0deg);
-      transition: 0.15s ease-in-out;
+      margin: 0;
+      top: 17px;
+      right: 4px;
+      padding: 11px;
+      border: 0;
+
+      p.nav-cerrar {
+          display: none;
+          position: relative;
+          top: -2px;
+          right: 46px;
+          font-family: ${fonts.reg};
+          font-size: 14px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: normal;
+          color: ${colors.blacknav};
+      }
+      .nav-icon {
+        position: relative;
+        width: 20px;
+        transform: rotate(0deg);
+        transition: 0.15s ease-in-out;
+        cursor: pointer;
+      }
+      .nav-icon span {
+        position: absolute;
+        right: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: ${colors.blacknav};
+        border-radius: 100px;
+        opacity: 1;
+        transform: rotate(0deg);
+        transition: 0.15s ease-in-out;
+      }
+      .nav-icon span:nth-child(1) {
+        top: 0px;
+      }
+      .nav-icon span:nth-child(2),
+      .nav-icon span:nth-child(3) {
+        top: 7px;
+      }
+      .nav-icon span:nth-child(4) {
+        top: 14px;
+      }
     }
-    .nav-icon span:nth-child(1) {
-      top: 0px;
-    }
-    .nav-icon span:nth-child(2),
-    .nav-icon span:nth-child(3) {
-      top: 7px;
-    }
-    .nav-icon span:nth-child(4) {
-      top: 14px;
-    }
+
+
+    
   }
+
+
 
   // Mobile
   .navbar-collapse {

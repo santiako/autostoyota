@@ -122,7 +122,21 @@ const Restaurants = createGlobalStyle`
             }
           }
         }
+      }
     }
+
+    @media (min-width: 1024px) {
+      .restaurants-wrapper {
+        ul:not(.pagination) {
+          li.column {
+            .img-wrapper {
+              img {
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
     }
 
     @media (min-width: ${sizes.desktop}) {
