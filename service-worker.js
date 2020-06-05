@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/modelosdeautos/precache-manifest.5059ac5e3b3c5adafcf3a92ccd2f0885.js"
+  "/modelosdeautos/precache-manifest.cd07e54b5c20d2a41293ef3c64db4271.js"
 );
 
 workbox.clientsClaim();

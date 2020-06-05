@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "84fb968e7f05df0acf20b8acf4e47903",
-    "url": "/modelosdeautos/static/media/logo.84fb968e.svg"
+    "revision": "2ffaf23574d7623fbf3b984b9a447859",
+    "url": "/modelosdeautos/static/media/logo.2ffaf235.svg"
   },
   {
-    "revision": "4f5e6e34d65c1dc064f9",
-    "url": "/modelosdeautos/static/js/main.ef966297.chunk.js"
+    "revision": "37f6cc72cb347a18aa54",
+    "url": "/modelosdeautos/static/js/main.5ffb300b.chunk.js"
   },
   {
     "revision": "5290ee2ffdddc9298dfa58f6a21826a8",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/modelosdeautos/static/css/2.275d0061.chunk.css"
   },
   {
-    "revision": "736325d9a6b1ed51c5802b408ed8a419",
+    "revision": "bff0bb06c0f2e1f1533e740d18684a1d",
     "url": "/modelosdeautos/index.html"
   }
 ];
